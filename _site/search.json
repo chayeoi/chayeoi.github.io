@@ -18,7 +18,7 @@
   
     {
       "title"    : "블로그 테스트 6",
-      "category" : "javascript",
+      "category" : "css",
       "tags"     : "Blog, This",
       "url"      : "/learn/css3/i-conquer-the-himalayas/",
       "date"     : "2017-08-25 13:32:20 +0300"
@@ -34,7 +34,7 @@
   
     {
       "title"    : "블로그 테스트 4",
-      "category" : "",
+      "category" : "etc",
       "tags"     : "Blog, This",
       "url"      : "/learn/etc/meeting-with-adventures/",
       "date"     : "2017-08-23 13:32:20 +0300"
@@ -42,7 +42,7 @@
   
     {
       "title"    : "블로그 테스트 3",
-      "category" : "",
+      "category" : "etc",
       "tags"     : "Blog, 찬연",
       "url"      : "/learn/etc/snowboarding-and-my-life/",
       "date"     : "2017-08-22 13:32:20 +0300"
@@ -50,7 +50,7 @@
   
     {
       "title"    : "블로그 테스트 2",
-      "category" : "",
+      "category" : "etc",
       "tags"     : "Blog, Prototype",
       "url"      : "/learn/etc/time-to-think/",
       "date"     : "2017-08-21 13:32:20 +0300"
@@ -58,7 +58,7 @@
   
     {
       "title"    : "블로그 테스트 1",
-      "category" : "",
+      "category" : "html5",
       "tags"     : "Blog, Charlie",
       "url"      : "/learn/html5/the-forest-in-the-fog/",
       "date"     : "2017-08-20 13:32:20 +0300"

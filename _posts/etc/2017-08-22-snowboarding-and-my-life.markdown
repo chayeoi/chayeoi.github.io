@@ -6,6 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: post-etc.jpg # Add image post (optional)
 tags: [Blog, 찬연]
 author: # Add name author (optional)
+category: etc
 permalink: /learn/etc/:title/
 ---
 언제완성하냐

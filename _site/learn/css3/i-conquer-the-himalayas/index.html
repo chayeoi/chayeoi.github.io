@@ -42,6 +42,7 @@
           <li><a href="/html5">HTML5</a></li>
           <li><a href="/css3">CSS3</a></li>
           <li><a href="/javascript">Javascript</a></li>
+          <li><a href="/til">Today I Learned</a></li>
         </ul>
       </nav>
       <p class="logo"><a href="/">YEONIARY BLOG</a></p>
@@ -54,7 +55,7 @@
 
   <article class="article-page">
     <div class="page-image">
-      <div class="cover-image" style="background: url(/assets/img/post-html.jpg) center no-repeat; background-size: cover;"></div>
+      <div class="cover-image" style="background: url(/assets/img/post-css.jpg) center no-repeat; background-size: cover;"></div>
     </div>
     <div class="wrapper">
       <div class="page-content">
@@ -149,22 +150,22 @@
       </li>
       <li>
         <p>다음으로 <a href="https://facebook.github.io/immutable-js/">Immutable.js</a> 같은 라이브러리의 사용을 고려해보자. 이런 라이브러리들은 <code class="highlighter-rouge">Object.freeze</code>처럼 객체를 정말로 얼려버리지는 않지만, 객체를 <strong>마치 불변인 것처럼</strong> 다룰 수 있는 방법을 제공한다. 다시 말하면, 이 객체들은 메소드를 통해 내용이 조금이라도 변경되면 아예 새로운 객체를 반환한다. 즉, <strong>내용이 달라지면 참조 역시 달라지게 되어</strong> 객체의 내용이 변경되었는지를 확인하는 작업이 아주 쉬워진다. 아래는 Immutable.js에서 제공하는 <code class="highlighter-rouge">List</code>를 활용한 예제이다.</p>
-
-        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">List</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'immutable'</span><span class="p">;</span>
-
-<span class="c1">// Immutable.js에서 제공하는 `List`는 배열과 유사하지만, 불변인 것처럼 다룰 수 있는 자료구조입니다.</span>
-<span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">List</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">newList</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// 새 List 인스턴스를 반환합니다.</span>
-
-<span class="c1">// 내용이 달라지면, 참조도 달라집니다.</span>
-<span class="nx">list</span> <span class="o">===</span> <span class="nx">newList</span><span class="p">;</span> <span class="c1">// false</span>
-</code></pre></div>        </div>
       </li>
     </ol>
-
-    <p><br /></p>
   </li>
 </ol>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">      <span class="k">import</span> <span class="p">{</span><span class="nx">List</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'immutable'</span><span class="p">;</span>
+
+      <span class="c1">// Immutable.js에서 제공하는 `List`는 배열과 유사하지만, 불변인 것처럼 다룰 수 있는 자료구조입니다.</span>
+      <span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">List</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+      <span class="kd">const</span> <span class="nx">newList</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// 새 List 인스턴스를 반환합니다.</span>
+
+      <span class="c1">// 내용이 달라지면, 참조도 달라집니다.</span>
+      <span class="nx">list</span> <span class="o">===</span> <span class="nx">newList</span><span class="p">;</span> <span class="c1">// false</span>
+      </code></pre></figure>
+
+<p><br /></p>
 
 <h4 id="15-래퍼-객체wrapper-object">1.5 래퍼 객체(Wrapper Object)</h4>
 
@@ -236,11 +237,11 @@
       
     
       
-        <a href="/learn/js/hello-world/" class="recent-item" style="background: url(/assets/img/post-css.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 7</span></a>
+        <a href="/learn/js/hello-world/" class="recent-item" style="background: url(/assets/img/post-js.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 7</span></a>
       
     
       
-        <a href="/learn/css3/i-conquer-the-himalayas/" class="recent-item" style="background: url(/assets/img/post-html.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 6</span></a>
+        <a href="/learn/css3/i-conquer-the-himalayas/" class="recent-item" style="background: url(/assets/img/post-css.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 6</span></a>
       
     
       
