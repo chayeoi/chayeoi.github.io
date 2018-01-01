@@ -3,7 +3,8 @@
   font-weight: 200;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-ExtraLight.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-ExtraLight.eot');
+  src: url('../fonts/EOT/SourceCodePro-ExtraLight.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-ExtraLight.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-ExtraLight.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-ExtraLight.otf') format('opentype'),
@@ -15,7 +16,8 @@
   font-weight: 200;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-ExtraLightIt.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-ExtraLightIt.eot');
+  src: url('../fonts/EOT/SourceCodePro-ExtraLightIt.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-ExtraLightIt.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-ExtraLightIt.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-ExtraLightIt.otf') format('opentype'),
@@ -27,7 +29,8 @@
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-Light.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-Light.eot');
+  src: url('../fonts/EOT/SourceCodePro-Light.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-Light.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-Light.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-Light.otf') format('opentype'),
@@ -39,7 +42,8 @@
   font-weight: 300;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-LightIt.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-LightIt.eot');
+  src: url('../fonts/EOT/SourceCodePro-LightIt.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-LightIt.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-LightIt.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-LightIt.otf') format('opentype'),
@@ -51,7 +55,8 @@
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-Regular.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-Regular.eot');
+  src: url('../fonts/EOT/SourceCodePro-Regular.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-Regular.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-Regular.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-Regular.otf') format('opentype'),
@@ -63,7 +68,8 @@
   font-weight: 400;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-It.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-It.eot');
+  src: url('../fonts/EOT/SourceCodePro-It.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-It.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-It.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-It.otf') format('opentype'),
@@ -75,7 +81,8 @@
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-Medium.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-Medium.eot');
+  src: url('../fonts/EOT/SourceCodePro-Medium.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-Medium.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-Medium.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-Medium.otf') format('opentype'),
@@ -87,7 +94,8 @@
   font-weight: 500;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-MediumIt.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-MediumIt.eot');
+  src: url('../fonts/EOT/SourceCodePro-MediumIt.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-MediumIt.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-MediumIt.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-MediumIt.otf') format('opentype'),
@@ -99,7 +107,8 @@
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-Semibold.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-Semibold.eot');
+  src: url('../fonts/EOT/SourceCodePro-Semibold.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-Semibold.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-Semibold.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-Semibold.otf') format('opentype'),
@@ -111,7 +120,8 @@
   font-weight: 600;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-SemiboldIt.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-SemiboldIt.eot');
+  src: url('../fonts/EOT/SourceCodePro-SemiboldIt.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-SemiboldIt.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-SemiboldIt.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-SemiboldIt.otf') format('opentype'),
@@ -123,7 +133,8 @@
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-Bold.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-Bold.eot');
+  src: url('../fonts/EOT/SourceCodePro-Bold.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-Bold.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-Bold.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-Bold.otf') format('opentype'),
@@ -135,7 +146,8 @@
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-BoldIt.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-BoldIt.eot');
+  src: url('../fonts/EOT/SourceCodePro-BoldIt.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-BoldIt.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-BoldIt.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-BoldIt.otf') format('opentype'),
@@ -147,7 +159,8 @@
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-Black.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-Black.eot');
+  src: url('../fonts/EOT/SourceCodePro-Black.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-Black.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-Black.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-Black.otf') format('opentype'),
@@ -159,7 +172,8 @@
   font-weight: 900;
   font-style: italic;
   font-stretch: normal;
-  src: url('../fonts/EOT/SourceCodePro-BlackIt.eot') format('embedded-opentype'),
+  src: url('../fonts/EOT/SourceCodePro-BlackIt.eot');
+  src: url('../fonts/EOT/SourceCodePro-BlackIt.eot#iefix') format('embedded-opentype'),
   url('../fonts/WOFF2/TTF/SourceCodePro-BlackIt.ttf.woff2') format('woff2'),
   url('../fonts/WOFF/OTF/SourceCodePro-BlackIt.otf.woff') format('woff'),
   url('../fonts/OTF/SourceCodePro-BlackIt.otf') format('opentype'),
