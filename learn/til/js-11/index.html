@@ -31,10 +31,12 @@
   <header class="main-header">
   <div class="wrapper">
     <div class="header-flex">
+      <h1 class="logo"><a href="/">MY NICE BLOG</a></h1>
       <div class="menu-icon-container">
         <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
       </div>
       <nav class="main-nav">
+        <h2 class="nav-heading-invisible">네비게이션</h2>
         <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
         <ul>
           <li><a href="/">Home</a></li>
@@ -45,7 +47,6 @@
           <li><a href="/til">Today I Learned</a></li>
         </ul>
       </nav>
-      <p class="logo"><a href="/">MY NICE BLOG</a></p>
       <div class="search-icon-container">
         <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
       </div>
@@ -87,41 +88,41 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">counter</span><span class="p">());</span> <span class="c1">// 2</span>
 </code></pre></div>    </div>
 
-    <p>function personFactory(initialAge) {</p>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">personFactory</span><span class="p">(</span><span class="nx">initialAge</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="nx">initialAge</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">getOlder</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">age</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">getAge</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="c1">// `age`를 직접 변경할 수 있는 방법이 없다!</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>근래의 JavaScript 디버거는 클로저에 어떤 값이 들어있는지를 보여주는 기능을 포함하고 있다.</p>
   </li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> let age = initialAge;
- return {
-   getOlder() {
-     age++;
-   }
-   getAge() {
-     return age;
-   }
- };
+<p><br /></p>
 
-</code></pre></div></div>
+<h4 id="12-화살표-함수와-고차-함수">1.2 화살표 함수와 고차 함수</h4>
 
-<p>}
-   // <code class="highlighter-rouge">age</code>를 직접 변경할 수 있는 방법이 없다!</p>
+<ol>
+  <li>
+    <p>화살표 함수 문법을 이용하면, 적은 양의 코드만 사용해서 고차 함수를 만들 수 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. 근래의 JavaScript 디버거는 클로저에 어떤 값이 들어있는지를 보여주는 기능을 포함하고 있다.
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">makeCounter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
 
-&lt;br /&gt;
-
-#### 1.2 화살표 함수와 고차 함수
-
-1. 화살표 함수 문법을 이용하면, 적은 양의 코드만 사용해서 고차 함수를 만들 수 있다.
-
-   ```javascript
-   const makeCounter = (x = 1) =&gt; () =&gt; x++;
-
-   const counter = makeCounter();
-   console.log(counter()); // 1
-   console.log(counter()); // 2
-
-</code></pre></div></div>
+<span class="kd">const</span> <span class="nx">counter</span> <span class="o">=</span> <span class="nx">makeCounter</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">counter</span><span class="p">());</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">counter</span><span class="p">());</span> <span class="c1">// 2</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
 
 <p><br /></p>
 
@@ -166,85 +167,84 @@
 <span class="c1">// 계산된 결과가 순차적으로 콜 스택에 쌓인다.</span>
 </code></pre></div>    </div>
 
-    <p>// 루프로 구현된 피보나치 수
-function fiboLoop(n) {</p>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 루프로 구현된 피보나치 수</span>
+<span class="kd">function</span> <span class="nx">fiboLoop</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">y</span><span class="p">,</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 재귀 함수로 구현된 피보나치 수</span>
+<span class="kd">function</span> <span class="nx">fiboRec</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span>
+    <span class="nx">n</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span>
+    <span class="nx">fiboRec</span><span class="p">(</span><span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">fiboRec</span><span class="p">(</span><span class="nx">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>거의 모든 재귀함수는 계속적으로 진행할지 말지에 대한 조건을 포함한다. 또한 다음 함수 호출 시에 넘겨지는 인자를 변경하는 부분을 갖는다.</p>
+  </li>
+  <li>
+    <p>위에서 볼 수 있듯이, 재귀 함수를 사용하면 루프를 사용했을 때보다 <strong>코드의 의미가 명확해지고 코드의 길이를 줄일 수 있다</strong>는 장점이 있다.</p>
+  </li>
+  <li>
+    <p>재귀함수를 사용하면 기존 방식보다 알고리즘 효율을 효과적으로 높일 수 있다.</p>
   </li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> let x = 0;
- let y = 1;
- for (let i = 0; i &lt; n; i++) {
-   [x, y] = [y, x + y];
- }
- return x;
+<p><br /></p>
 
-</code></pre></div></div>
-
-<p>}</p>
-
-<p>// 재귀 함수로 구현된 피보나치 수
-   function fiboRec(n) {</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> return (
-   n &lt; 1 ? 0 :
-   n === 1 ? 1 :
-   fiboRec(n - 1) + fiboRec(n - 2)
- );
-
-</code></pre></div></div>
-
-<p>}</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. 거의 모든 재귀함수는 계속적으로 진행할지 말지에 대한 조건을 포함한다. 또한 다음 함수 호출 시에 넘겨지는 인자를 변경하는 부분을 갖는다.
-
-4. 위에서 볼 수 있듯이, 재귀 함수를 사용하면 루프를 사용했을 때보다 **코드의 의미가 명확해지고 코드의 길이를 줄일 수 있다**는 장점이 있다.
-
-5. 재귀함수를 사용하면 기존 방식보다 알고리즘 효율을 효과적으로 높일 수 있다.
-
-&lt;br /&gt;
-
-#### 1.4 분할 정복(Divide and Conquer)
-
-1. 분할 정복(divide and conquer)은 **문제를 작은 부분 문제로 나누어서 푼 뒤, 그 결과를 합치는 식**으로 알고리즘을 작성하는 기법이며, 재귀 함수가 활용되는 대표적인 사례이다. 바로 위의 `fiboRec` 역시 분할 정복의 일종이라 할 수 있다.
-
-2. 피보나치 수열을 예로 들어 설명하면 다음과 같다.
-
-   1. 피보나치 수열에서 4항의 값을 얻기 위해 3항, 2항의 값을 얻는다.
-   2. 3항, 2항의 값을 얻기 위해 각각 2항과 1항, 1항과 0항의 값을 얻는다.
-
-3. 분할 정복 기법을 활용하는 알고리즘 중 대표적인 예로 **병합 정렬(merge sort)**을 들 수 있다.
-
-   ```javascript
-   function mergeSort(arr) {
-     // 입력된 배열의 길이가 1 이하이면 더 이상 재귀 호출을 하지 않는다.
-     if (arr.length &lt;= 1) return arr;
-
-     // 배열을 절반으로 잘라 두 개의 작은 배열로 분할하고,
-     // 두 작은 배열에 대해 재귀 호출을 수행한다.
-     const slicer = Math.floor(arr.length / 2);
-     const arr1 = mergeSort(arr.slice(0, slicer));
-     const arr2 = mergeSort(arr.slice(slicer));
-
-     // 'arr1', 'arr2'는 이미 정렬되어있는 상태이므로,
-     // 이 성질을 이용해 두 배열을 정렬되어있는 큰 배열로 합칠 수 있다.
-     const newArr = [];
-     for (let i = 0, j = 0; i &lt; arr1.length || j &lt; arr2.length; ) {
-       if (arr1[i] == undefined || arr1[i] &gt; arr2[j]) {
-         newArr.push(arr2[j]);
-         j++;
-       } else {
-         newArr.push(arr1[i]);
-         i++;
-       }
-     }
-
-     // 큰 배열을 반환한다.
-     return newArr;
-   }
-
-</code></pre></div></div>
+<h4 id="14-분할-정복divide-and-conquer">1.4 분할 정복(Divide and Conquer)</h4>
 
 <ol>
+  <li>
+    <p>분할 정복(divide and conquer)은 <strong>문제를 작은 부분 문제로 나누어서 푼 뒤, 그 결과를 합치는 식</strong>으로 알고리즘을 작성하는 기법이며, 재귀 함수가 활용되는 대표적인 사례이다. 바로 위의 <code class="highlighter-rouge">fiboRec</code> 역시 분할 정복의 일종이라 할 수 있다.</p>
+  </li>
+  <li>
+    <p>피보나치 수열을 예로 들어 설명하면 다음과 같다.</p>
+
+    <ol>
+      <li>피보나치 수열에서 4항의 값을 얻기 위해 3항, 2항의 값을 얻는다.</li>
+      <li>3항, 2항의 값을 얻기 위해 각각 2항과 1항, 1항과 0항의 값을 얻는다.</li>
+    </ol>
+  </li>
+  <li>
+    <p>분할 정복 기법을 활용하는 알고리즘 중 대표적인 예로 <strong>병합 정렬(merge sort)</strong>을 들 수 있다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 입력된 배열의 길이가 1 이하이면 더 이상 재귀 호출을 하지 않는다.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+
+  <span class="c1">// 배열을 절반으로 잘라 두 개의 작은 배열로 분할하고,</span>
+  <span class="c1">// 두 작은 배열에 대해 재귀 호출을 수행한다.</span>
+  <span class="kd">const</span> <span class="nx">slicer</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">slicer</span><span class="p">));</span>
+  <span class="kd">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">slicer</span><span class="p">));</span>
+
+  <span class="c1">// 'arr1', 'arr2'는 이미 정렬되어있는 상태이므로,</span>
+  <span class="c1">// 이 성질을 이용해 두 배열을 정렬되어있는 큰 배열로 합칠 수 있다.</span>
+  <span class="kd">const</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span> <span class="o">||</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">arr2</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">undefined</span> <span class="o">||</span> <span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">newArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">arr2</span><span class="p">[</span><span class="nx">j</span><span class="p">]);</span>
+      <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">newArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+      <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 큰 배열을 반환한다.</span>
+  <span class="k">return</span> <span class="nx">newArr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
   <li>
     <p>병합 정렬이 선택 정렬과 비교했을 때 훨씬 빠르다.</p>
 
@@ -316,7 +316,7 @@ function fiboLoop(n) {</p>
 
       <h5 id="iife">IIFE</h5>
 
-      <p><code class="highlighter-rouge">fiboRecMemoized</code>를 만들 때, 클로저에 <code class="highlighter-rouge">memo</code>라는 저장소를 숨기기 위해서 화살표 함수 리터럴을 통해 함수를 만든 후 이 함수를 바로 호출했습니다. 이렇게 함수 리터럴을 바로 호출하는 기법을 IIFE(Immediately Invoked Function Expression) 혹은 ‘즉시 호출 함수 표현식’이라고 부릅니다. 이전에는 전역 스코프를 오염시키지 않고 변수를 선언하려는 목적에서 IIFE가 널리 사용되었지만, CommonJS 혹은 ES2015 모듈이 같은 역할을 해 줄 수 있기 때문에 최근에는 IIFE가 자주 사용되지는 않습니다</p>
+      <p><code class="highlighter-rouge">fiboRecMemoized</code>를 만들 때, 클로저에 <code class="highlighter-rouge">memo</code>라는 저장소를 숨기기 위해서 화살표 함수 리터럴을 통해 함수를 만든 후 이 함수를 바로 호출했다. 이렇게 함수 리터럴을 바로 호출하는 기법을 IIFE(Immediately Invoked Function Expression) 혹은 ‘즉시 호출 함수 표현식’이라고 부른다. 이전에는 전역 스코프를 오염시키지 않고 변수를 선언하려는 목적에서 IIFE가 널리 사용되었지만, CommonJS 혹은 ES2015 모듈이 같은 역할을 해 줄 수 있기 때문에 최근에는 IIFE가 자주 사용되지는 않는다.</p>
     </blockquote>
   </li>
 </ol>
@@ -1025,10 +1025,10 @@ function fiboLoop(n) {</p>
         <li class="instagram"><a href="https://instagram.com/chayeoi" target="_blank"><i class="fa fa-instagram"></i></a></li>
       
       <!-- 
-        <li class="email"><a href="mailto:example.adam@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        <li class="email"><a href="mailto:y2oniary@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
        -->
       <!-- 
-        <li class="phone"><a href="tel:044 825 5523"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+        <li class="phone"><a href="tel:010-2650-5090"><i class="fa fa-phone"></i></a></li>
        -->
       
         <li class="website"><a href="http://chayeoi.creatorlink.net" target="_blank"><i class="fa fa-globe"></i></a></li>
