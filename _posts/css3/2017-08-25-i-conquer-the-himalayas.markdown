@@ -82,16 +82,16 @@ permalink: /learn/css3/:title/
 
    2. 다음으로 [Immutable.js](https://facebook.github.io/immutable-js/) 같은 라이브러리의 사용을 고려해보자. 이런 라이브러리들은 `Object.freeze`처럼 객체를 정말로 얼려버리지는 않지만, 객체를 **마치 불변인 것처럼** 다룰 수 있는 방법을 제공한다. 다시 말하면, 이 객체들은 메소드를 통해 내용이 조금이라도 변경되면 아예 새로운 객체를 반환한다. 즉, **내용이 달라지면 참조 역시 달라지게 되어** 객체의 내용이 변경되었는지를 확인하는 작업이 아주 쉬워진다. 아래는 Immutable.js에서 제공하는 `List`를 활용한 예제이다.
 
-      {% highlight javascript %}
-      import {List} from 'immutable';
+{% highlight javascript %}
+import {List} from 'immutable';
 
-      // Immutable.js에서 제공하는 `List`는 배열과 유사하지만, 불변인 것처럼 다룰 수 있는 자료구조입니다.
-      const list = List.of(1, 2, 3);
-      const newList = list.push(4); // 새 List 인스턴스를 반환합니다.
+// Immutable.js에서 제공하는 `List`는 배열과 유사하지만, 불변인 것처럼 다룰 수 있는 자료구조입니다.
+const list = List.of(1, 2, 3);
+const newList = list.push(4); // 새 List 인스턴스를 반환합니다.
 
-      // 내용이 달라지면, 참조도 달라집니다.
-      list === newList; // false
-      {% endhighlight %}
+// 내용이 달라지면, 참조도 달라집니다.
+list === newList; // false
+{% endhighlight %}
 
    <br />
 
