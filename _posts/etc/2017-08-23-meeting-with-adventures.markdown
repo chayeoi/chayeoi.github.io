@@ -3,7 +3,7 @@ layout: post
 title:  블로그 테스트 4
 date:   2017-08-23 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: post-3.jpg # Add image post (optional)
+img: post-etc.jpg # Add image post (optional)
 tags: [Blog, This]
 author: # Add name author (optional)
 permalink: /learn/etc/:title/

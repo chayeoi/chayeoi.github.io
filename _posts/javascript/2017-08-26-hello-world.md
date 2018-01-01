@@ -3,7 +3,7 @@ layout: post
 title:  블로그 테스트 7
 date:   2017-08-26 13:32:20 +0300
 description: Hello Worldss # Add post description (optional)
-img: post-4.jpg # Add image post (optional)
+img: post-css.jpg # Add image post (optional)
 tags: [Blog, 찬연, Prototype]
 author: # Add name author (optional)
 category: javascript
