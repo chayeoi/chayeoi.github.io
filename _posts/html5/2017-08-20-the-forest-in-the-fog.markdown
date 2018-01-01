@@ -6,7 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: post-html.jpg # Add image post (optional)
 tags: [Blog, Charlie]
 author: # Add name author (optional)
-category: html5
+category: html
 permalink: /learn/html5/:title/
 ---
 # Today I Learned

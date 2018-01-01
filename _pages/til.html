@@ -2,5 +2,9 @@
 layout: home-page
 title: Today I Learned
 permalink: /til/
+pagination:
+  enabled: true
+  category: til
+  per_page: 6
 ---
-<h1 class="pages-heading">{{page.title}} 포스트 목록</h1>
+{% include pages.html %}

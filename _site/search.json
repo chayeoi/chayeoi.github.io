@@ -18,7 +18,7 @@
   
     {
       "title"    : "HTML5 Outline 알고리즘",
-      "category" : "html5",
+      "category" : "html",
       "tags"     : "html5, outline, 아웃라인",
       "url"      : "/learn/html5/outline/",
       "date"     : "2017-12-31 00:00:00 +0900"
@@ -178,7 +178,7 @@
   
     {
       "title"    : "블로그 테스트 8",
-      "category" : "javascript",
+      "category" : "js",
       "tags"     : "Blog, 찬연, Prototype",
       "url"      : "/learn/js/charlie/",
       "date"     : "2017-10-01 13:32:20 +0300"
@@ -186,7 +186,7 @@
   
     {
       "title"    : "블로그 테스트 7",
-      "category" : "javascript",
+      "category" : "js",
       "tags"     : "Blog, 찬연, Prototype",
       "url"      : "/learn/js/hello-world/",
       "date"     : "2017-08-26 13:32:20 +0300"
@@ -234,7 +234,7 @@
   
     {
       "title"    : "블로그 테스트 1",
-      "category" : "html5",
+      "category" : "html",
       "tags"     : "Blog, Charlie",
       "url"      : "/learn/html5/the-forest-in-the-fog/",
       "date"     : "2017-08-20 13:32:20 +0300"
