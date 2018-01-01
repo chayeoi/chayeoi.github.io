@@ -1,8 +1,16 @@
 [
   
     {
+      "title"    : "Nice to meet you.",
+      "category" : "javascript",
+      "tags"     : "Blog, Mountains, Sport",
+      "url"      : "/hello-world/",
+      "date"     : "2017-08-26 13:32:20 +0300"
+    } ,
+  
+    {
       "title"    : "I conquer the Himalayas",
-      "category" : "",
+      "category" : "javascript",
       "tags"     : "Blog, Mountains",
       "url"      : "/i-conquer-the-himalayas/",
       "date"     : "2017-08-25 13:32:20 +0300"
