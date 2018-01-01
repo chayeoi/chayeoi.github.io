@@ -11,11 +11,13 @@
 
 .highlighter-rouge {
   color: #87314e;
+  font-size: 0.9rem;
   font-weight: 400;
   /* border: 1px solid #607D8B; */
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 0.1rem 0;
+  background: #faf9f9;
 }
 
 .highlight .hll {
@@ -806,11 +808,15 @@ a {
 }
 
 blockquote {
-  border-left: 3px solid #311e3e;
-  padding-left: 18px;
+  /* border default */
+  /* border-left: 3px solid #3e1e36; */
+  border-left: 3px solid #33b880;
+  margin: 16px 0px;
+  padding: 5px 18px;
   margin-left: 21px;
   font-style: italic;
   color: #311e3e;
+  background-color: #fdfdfd;
 }
 
 pre {
@@ -917,6 +923,7 @@ pre code {
 
 .main-header .logo {
   width: 50%;
+  font-family: 'Lato', sans-serif;
   text-align: center;
 }
 
@@ -969,6 +976,7 @@ pre code {
 .menu-icon-container {
   width: 25%;
   text-align: left;
+  order: -1;
 }
 
 .search-icon-container {
@@ -1087,7 +1095,7 @@ pre code {
 
 .post-card {
   position: relative;
-  margin: 2px;
+  margin: 1px;
 }
 
 .post-card .post-card-image {
@@ -1790,9 +1798,13 @@ pre code {
   left: 0px;
   width: 20px;
   height: 20px;
-  border: 3px solid #16d485;
+  border: 3px solid #33bb80;
   border-bottom-color: none;
   border-left-color: none;
   transform: rotate(45deg) translateY(-50%);
-  /* background-color: #16d485; */
+}
+
+/* a11ly */
+[class*="invisible"] {
+  display: none;
 }

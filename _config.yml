@@ -15,15 +15,16 @@ author-pic: chayeoi-profile.jpg
 about-author: 자바스크립트를 무척 좋아하는 주니어 프론트엔드 개발자입니다. 현재 React.js, Vue.js, Node.js를 공부 중에 있습니다.
 
 # Contact links
-email: # Add your Email address
-phone: # Add your Phone number
+email: y2oniary@gmail.com # Add your Email address
+phone: 010-2650-5090 # Add your Phone number
 website: chayeoi.creatorlink.net # Add your website, do not add http://
-linkedin: # Add your Linkedin handle
+repo: y2oniary
+# linkedin: # Add your Linkedin handle
 github: chayeoi # Add your Github handle
 # twitter: '@artemsheludko_' # Add your Twitter handle
 facebook: chayeoi # Add your Facebook handle
 instagram: chayeoi # Add your Instagram handle
-pinterest: # Add your Pinterest handle
+# pinterest: # Add your Pinterest handle
 
 # Newsletter
 mailchimp: # Add your MailChimp form identifier.
