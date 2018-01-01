@@ -44,7 +44,7 @@ pagination:
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate-v2
