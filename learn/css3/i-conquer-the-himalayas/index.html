@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>블로그 테스트 6 - YEONIARY BLOG</title>
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="flex-container">
+  <header class="main-header">
+  <div class="wrapper">
+    <div class="header-flex">
+      <div class="menu-icon-container">
+        <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </div>
+      <nav class="main-nav">
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/html5">HTML5</a></li>
+          <li><a href="/css3">CSS3</a></li>
+          <li><a href="/javascript">Javascript</a></li>
+        </ul>
+      </nav>
+      <p class="logo"><a href="/">YEONIARY BLOG</a></p>
+      <div class="search-icon-container">
+        <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+</header> <!-- End Header -->
+
+  <article class="article-page">
+    <div class="page-image">
+      <div class="cover-image" style="background: url(/assets/img/post-1.jpg) center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">블로그 테스트 6</h1>
+          <div class="page-date"><time datetime="2017-08-25 13:32:20 +0300">2017, Aug 25</time></div>
+        </div>
+        <h2 id="1-day">1 Day</h2>
+
+<h3 id="1-값-더-알아보기">1. 값 더 알아보기</h3>
+
+<h4 id="11-블록-스코프">1.1 블록 스코프</h4>
+
+<ol>
+  <li>
+    <p>특별한 기능이 없는 블록을 만들 수도 있다. 객체와 유사하게 중괄호로 코드의 일부분을 둘러싸면 된다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="c1">// ReferenceError: i is not defined</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="12-함수-호출">1.2 함수 호출</h4>
+
+<ol>
+  <li>
+    <p>만약 함수 호출 시에 객체를 인자로 넘긴다면, 이 때 역시 <strong>실제로 복사되는 것은 객체 자체가 아니라 참조</strong>이다. 그래서, 우리는 이 참조를 이용해 <strong>원본 객체의 내용을 변경할 수 있다.</strong> 원본이나, 복사된 참조나 <strong>같은 객체를 가리키기 때문이다.</strong></p>
+  </li>
+  <li>
+    <p>아래 코드에서 <code class="highlighter-rouge">obj</code>가 실제 heap에 저장된 객체에 대한 참조를 담고 있을 때, <code class="highlighter-rouge">obj</code>를 <code class="highlighter-rouge">addProp(o)</code> 함수에 인자로 전달하면 <code class="highlighter-rouge">o</code>에는 <code class="highlighter-rouge">obj</code>가 참조하고 있는 같은 객체에 대한 참조 주소가 복사된다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="kd">function</span> <span class="nx">addProp</span><span class="p">(</span><span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">o</span><span class="p">.</span><span class="nx">prop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 변수 `obj`에 저장되어 있는 참조가 매개변수 `o`에 복사된다.</span>
+<span class="nx">addProp</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">prop</span><span class="p">);</span> <span class="c1">// 1</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="13-객체의-같음">1.3 객체의 같음</h4>
+
+<ol>
+  <li>
+    <p>프로그램을 작성하다가 객체에 대한 비교를 하는 코드를 짜고 있는 자신을 발견하게 되면, 지금 객체의 내용을 비교하려고 하는 것인지, 또는 객체의 참조를 비교하려고 하는 것인지를 꼭 생각해보자. 객체의 내용을 통해 비교하고 싶다면, 깊은 비교 기능을 지원하는 <a href="https://www.npmjs.com/package/fast-deep-equal">라이브러리</a>를 이용하거나, 정확히 어떤 내용을 비교하고 싶은지를 가지고 <strong>함수 혹은 메소드</strong>를 작성한 후 그것을 이용하면 된다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// npm install fast-deep-equal</span>
+<span class="kd">var</span> <span class="nx">equal</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fast-deep-equal'</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">equal</span><span class="p">({</span><span class="na">foo</span><span class="p">:</span> <span class="s1">'bar'</span><span class="p">},</span> <span class="p">{</span><span class="na">foo</span><span class="p">:</span> <span class="s1">'bar'</span><span class="p">}));</span> <span class="c1">// true </span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="14-불변성immutability">1.4 불변성(Immutability)</h4>
+
+<ol>
+  <li>
+    <p>가변인 값은 어디서 어떻게 변경될 지 알 수 없다. 변경되지 말아야 할 객체가 있다면, 정말로 변경되지 않도록 신경 써서 코드를 작성해야 한다. 그러나 객체가 정말로 변경되지 않았는지를 확인하는 일은 쉽지 않아서, 때때로 <strong>객체의 가변성 때문에 프로그래밍이 어려워지기도 한다.</strong></p>
+  </li>
+  <li>
+    <p>객체의 가변성 때문에 어려움을 겪고 있다면, 두 가지 해결책을 시도해볼 수 있다.</p>
+
+    <ol>
+      <li>
+        <p>먼저 <code class="highlighter-rouge">Object.freeze</code>의 사용을 고려해볼 수 있다. <code class="highlighter-rouge">Object.freeze</code>는 객체를 <strong>얼려서</strong> 속성의 추가, 변경, 삭제를 막는다. 다만 <code class="highlighter-rouge">Object.freeze</code>를 호출한다고 해서 <strong>객체 안에 있는 객체</strong>까지 얼려버리지는 않으므로, 중첩된 객체에는 <code class="highlighter-rouge">Object.freeze</code>를 사용하기가 조금 까다롭다. 그리고, 다음에 소개할 방법과 비교하면 여러모로 편의성이 떨어진다.</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="na">prop</span><span class="p">:</span> <span class="mi">1</span><span class="p">};</span>
+
+<span class="nb">Object</span><span class="p">.</span><span class="nx">freeze</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+
+<span class="c1">// 모두 무시된다.</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">prop</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">newProp</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="k">delete</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span> <span class="c1">// { prop: 1 }</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>다음으로 <a href="https://facebook.github.io/immutable-js/">Immutable.js</a> 같은 라이브러리의 사용을 고려해보자. 이런 라이브러리들은 <code class="highlighter-rouge">Object.freeze</code>처럼 객체를 정말로 얼려버리지는 않지만, 객체를 <strong>마치 불변인 것처럼</strong> 다룰 수 있는 방법을 제공한다. 다시 말하면, 이 객체들은 메소드를 통해 내용이 조금이라도 변경되면 아예 새로운 객체를 반환한다. 즉, <strong>내용이 달라지면 참조 역시 달라지게 되어</strong> 객체의 내용이 변경되었는지를 확인하는 작업이 아주 쉬워진다. 아래는 Immutable.js에서 제공하는 <code class="highlighter-rouge">List</code>를 활용한 예제이다.</p>
+
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">List</span><span class="p">}</span> <span class="k">from</span> <span class="s1">'immutable'</span><span class="p">;</span>
+
+<span class="c1">// Immutable.js에서 제공하는 `List`는 배열과 유사하지만, 불변인 것처럼 다룰 수 있는 자료구조입니다.</span>
+<span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">List</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">newList</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// 새 List 인스턴스를 반환합니다.</span>
+
+<span class="c1">// 내용이 달라지면, 참조도 달라집니다.</span>
+<span class="nx">list</span> <span class="o">===</span> <span class="nx">newList</span><span class="p">;</span> <span class="c1">// false</span>
+</code></pre></div>        </div>
+      </li>
+    </ol>
+
+    <p><br /></p>
+  </li>
+</ol>
+
+<h4 id="15-래퍼-객체wrapper-object">1.5 래퍼 객체(Wrapper Object)</h4>
+
+<ol>
+  <li><code class="highlighter-rouge">String.prototype.valueOf()</code> 메소드를 이용하여 String 객체 타입을 원시 타입의 값으로 되돌릴 수 있다.</li>
+</ol>
+
+<p><br /></p>
+
+<blockquote>
+  <p>인용 블록 입니다. this is blockquote.</p>
+</blockquote>
+
+<p><img src="/assets/img/yosh-ginsu.jpg" alt="Yosh Ginsu" /></p>
+
+
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#Blog" class="tag">| Blog</a>
+            
+            <a href="/tags#This" class="tag">| This</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=블로그 테스트 6&url=http://localhost:4000/learn/css3/i-conquer-the-himalayas/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/learn/css3/i-conquer-the-himalayas/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/learn/css3/i-conquer-the-himalayas/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <section class="author-box">
+  <img src="/assets/img/chayeoi-profile.jpg" alt="Chanyeon Kim" class="author-img">
+  <div class="author-desc">
+    <h2>Chanyeon Kim</h2>
+    <p>프론트엔드 개발자를 꿈꾸고 있습니다.</p>
+    <ul>
+      
+        <li class="github"><a href="http://github.com/chayeoi" target="_blank"><i class="fa fa-github"></i></a></li>
+      
+      
+        <li class="facebook"><a href="https://facebook.com/chayeoi" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      
+      
+        <li class="instagram"><a href="https://instagram.com/chayeoi" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      
+      <!-- 
+        <li class="email"><a href="mailto:example.adam@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+       -->
+      <!-- 
+        <li class="phone"><a href="tel:044 825 5523"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+       -->
+      
+        <li class="website"><a href="http://chayeoi.creatorlink.net" target="_blank"><i class="fa fa-globe"></i></a></li>
+      
+      <!-- 
+        <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+       -->
+    </ul>
+  </div>
+</section>
+        <div class="recent-box">
+  <h2 class="recent-title">Recent post</h2>
+  <div class="recent-list">
+    
+      
+        <a href="/learn/js/charlie/" class="recent-item" style="background: url(/assets/img/post-4.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 8</span></a>
+      
+    
+      
+        <a href="/learn/js/hello-world/" class="recent-item" style="background: url(/assets/img/post-4.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 7</span></a>
+      
+    
+      
+        <a href="/learn/css3/i-conquer-the-himalayas/" class="recent-item" style="background: url(/assets/img/post-1.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 6</span></a>
+      
+    
+      
+        <a href="/learn/css3/i-meet-the-sunset/" class="recent-item" style="background: url(/assets/img/post-2.jpg) center no-repeat; background-size: cover;"><span>블로그 테스트 5</span></a>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
+
+        <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <p>2018 &copy; Chanyeon Kim</p>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
