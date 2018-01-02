@@ -672,6 +672,7 @@ progress {
  */
 textarea {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /**
@@ -822,6 +823,7 @@ blockquote {
 pre {
   padding: 16px 32px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 pre code {
@@ -845,7 +847,6 @@ pre code {
   transition: -webkit-transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
   transition: transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
   transition: transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99), -webkit-transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
-  -webkit-overflow-scrolling: touch;
 }
 
 .flex-container.active {
@@ -1042,6 +1043,7 @@ pre code {
 .results-search {
   list-style: none;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   height: 90vh;
   margin: 0;
   padding: 0;
