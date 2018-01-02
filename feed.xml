@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-02T10:43:46+09:00</updated><id>http://localhost:4000/</id><title type="html">MY NICE BLOG</title><subtitle>프론트엔드 기술 블로그 # Write an awesome description for your new site here. You can edit this # line in _config.yml. It will appear in your document head meta (for # Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-02T13:38:26+09:00</updated><id>http://localhost:4000/</id><title type="html">MY NICE BLOG</title><subtitle>프론트엔드 기술 블로그 # Write an awesome description for your new site here. You can edit this # line in _config.yml. It will appear in your document head meta (for # Google search results) and in your feed.xml site description.
 </subtitle><author><name>Chanyeon Kim</name></author><entry><title type="html">this 바인딩 규칙</title><link href="http://localhost:4000/learn/js/this/" rel="alternate" type="text/html" title="this 바인딩 규칙" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/learn/js/this</id><content type="html" xml:base="http://localhost:4000/learn/js/this/">&lt;h1 id=&quot;this-바인딩&quot;&gt;This 바인딩&lt;/h1&gt;
 
 &lt;blockquote&gt;
@@ -11,7 +11,11 @@
 
 &lt;h2 id=&quot;outline-수정하자&quot;&gt;Outline 수정하자&lt;/h2&gt;</content><author><name>Chanyeon Kim</name></author><category term="html" /><category term="html5" /><category term="outline" /><category term="아웃라인" /><summary type="html">HTML5 Outliner</summary></entry><entry><title type="html">CSS 손보잣</title><link href="http://localhost:4000/learn/css3/css/" rel="alternate" type="text/html" title="CSS 손보잣" /><published>2017-12-30T00:00:00+09:00</published><updated>2017-12-30T00:00:00+09:00</updated><id>http://localhost:4000/learn/css3/css</id><content type="html" xml:base="http://localhost:4000/learn/css3/css/">&lt;h1 id=&quot;css3&quot;&gt;CSS3&lt;/h1&gt;
 
-&lt;h2 id=&quot;css도-수정하자&quot;&gt;CSS도 수정하자.&lt;/h2&gt;</content><author><name>Chanyeon Kim</name></author><category term="css3" /><category term="css" /><category term="layout" /><summary type="html">CSS3</summary></entry><entry><title type="html">17년 12월 21일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-11/" rel="alternate" type="text/html" title="17년 12월 21일 수업 내용 정리" /><published>2017-12-21T00:00:00+09:00</published><updated>2017-12-21T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-11</id><content type="html" xml:base="http://localhost:4000/learn/til/js-11/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
+&lt;h2 id=&quot;css도-수정하자-할게-많다&quot;&gt;CSS도 수정하자!! 할게 많다.&lt;/h2&gt;</content><author><name>Chanyeon Kim</name></author><category term="css3" /><category term="css" /><category term="layout" /><summary type="html">CSS3</summary></entry><entry><title type="html">17년 12월 21일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-11/" rel="alternate" type="text/html" title="17년 12월 21일 수업 내용 정리" /><published>2017-12-21T00:00:00+09:00</published><updated>2017-12-21T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-11</id><content type="html" xml:base="http://localhost:4000/learn/til/js-11/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;4-day&quot;&gt;4 Day&lt;/h2&gt;
 
@@ -936,6 +940,10 @@
   &lt;li&gt;코드의 중복은 유지보수를 어렵게 만든다. 같은 코드가 재사용되는 부분은 함수 단위로 만들어 관리한다.&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Chanyeon Kim</name></author><category term="til" /><category term="패스트캠퍼스" /><category term="til" /><category term="js" /><category term="javascript" /><summary type="html">Today I Learned</summary></entry><entry><title type="html">17년 12월 19일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-10/" rel="alternate" type="text/html" title="17년 12월 19일 수업 내용 정리" /><published>2017-12-19T00:00:00+09:00</published><updated>2017-12-19T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-10</id><content type="html" xml:base="http://localhost:4000/learn/til/js-10/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;2-day&quot;&gt;2 Day&lt;/h2&gt;
 
 &lt;h3 id=&quot;1-객체-더-알아보기&quot;&gt;1. 객체 더 알아보기&lt;/h3&gt;
@@ -1706,6 +1714,10 @@
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.dataset&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Chanyeon Kim</name></author><category term="til" /><category term="패스트캠퍼스" /><category term="til" /><category term="js" /><category term="javascript" /><summary type="html">Today I Learned</summary></entry><entry><title type="html">17년 12월 18일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-09/" rel="alternate" type="text/html" title="17년 12월 18일 수업 내용 정리" /><published>2017-12-18T00:00:00+09:00</published><updated>2017-12-18T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-09</id><content type="html" xml:base="http://localhost:4000/learn/til/js-09/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;1-day&quot;&gt;1 Day&lt;/h2&gt;
 
 &lt;h3 id=&quot;1-값-더-알아보기&quot;&gt;1. 값 더 알아보기&lt;/h3&gt;
@@ -2057,6 +2069,10 @@ function sum(…ns) {&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/SVG&quot;&gt;MDN 문서&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Chanyeon Kim</name></author><category term="til" /><category term="패스트캠퍼스" /><category term="til" /><category term="js" /><category term="javascript" /><summary type="html">Today I Learned</summary></entry><entry><title type="html">17년 12월 15일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-08/" rel="alternate" type="text/html" title="17년 12월 15일 수업 내용 정리" /><published>2017-12-15T00:00:00+09:00</published><updated>2017-12-15T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-08</id><content type="html" xml:base="http://localhost:4000/learn/til/js-08/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;5-day&quot;&gt;5 Day&lt;/h2&gt;
 
 &lt;h3 id=&quot;1-이벤트와-뷰-상태&quot;&gt;1. 이벤트와 뷰, 상태&lt;/h3&gt;
@@ -2174,6 +2190,10 @@ function sum(…ns) {&lt;/p&gt;
   &lt;li&gt;참조(reference)란, &lt;strong&gt;객체가 컴퓨터 메모리 상에서 어디에 저장되었는 지를 가리키는 값&lt;/strong&gt;이다. JavaScript에서는 우리가 참조를 직접 읽거나 조작할 수 없다. 하지만, 언어를 제대로 이해하기 위해서 참조가 무엇인지 알아야 할 필요는 있다.&lt;/li&gt;
   &lt;li&gt;우리가 객체라고 생각하고 다루어왔던 값은 실제로는 &lt;strong&gt;객체에 대한 참조&lt;/strong&gt;이다. 객체의 속성에 접근하면, JavaScript 엔진은 &lt;strong&gt;참조를 통해 메모리에 저장되어 있는 객체에 접근해서 해당 객체의 속성을 읽는다.&lt;/strong&gt; 이런 동작을 가지고 역참조(dereference)라고 한다.&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Chanyeon Kim</name></author><category term="til" /><category term="패스트캠퍼스" /><category term="til" /><category term="js" /><category term="javascript" /><summary type="html">Today I Learned</summary></entry><entry><title type="html">17년 12월 14일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-07/" rel="alternate" type="text/html" title="17년 12월 14일 수업 내용 정리" /><published>2017-12-14T00:00:00+09:00</published><updated>2017-12-14T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-07</id><content type="html" xml:base="http://localhost:4000/learn/til/js-07/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;4-day&quot;&gt;4 Day&lt;/h2&gt;
 
@@ -2350,6 +2370,10 @@ function sum(…ns) {&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;진리값을 반환하는 함수를 Predicate라고 한다.&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Chanyeon Kim</name></author><category term="til" /><category term="패스트캠퍼스" /><category term="til" /><category term="js" /><category term="javascript" /><summary type="html">Today I Learned</summary></entry><entry><title type="html">17년 12월 12일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-06/" rel="alternate" type="text/html" title="17년 12월 12일 수업 내용 정리" /><published>2017-12-12T00:00:00+09:00</published><updated>2017-12-12T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-06</id><content type="html" xml:base="http://localhost:4000/learn/til/js-06/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;2-day&quot;&gt;2 Day&lt;/h2&gt;
 
