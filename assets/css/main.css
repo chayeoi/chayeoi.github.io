@@ -845,6 +845,7 @@ pre code {
   transition: -webkit-transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
   transition: transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
   transition: transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99), -webkit-transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  -webkit-overflow-scrolling: touch;
 }
 
 .flex-container.active {
