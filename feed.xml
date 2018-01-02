@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-02T13:38:26+09:00</updated><id>http://localhost:4000/</id><title type="html">MY NICE BLOG</title><subtitle>프론트엔드 기술 블로그 # Write an awesome description for your new site here. You can edit this # line in _config.yml. It will appear in your document head meta (for # Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-02T22:27:30+09:00</updated><id>http://localhost:4000/</id><title type="html">MY NICE BLOG</title><subtitle>프론트엔드 기술 블로그 # Write an awesome description for your new site here. You can edit this # line in _config.yml. It will appear in your document head meta (for # Google search results) and in your feed.xml site description.
 </subtitle><author><name>Chanyeon Kim</name></author><entry><title type="html">this 바인딩 규칙</title><link href="http://localhost:4000/learn/js/this/" rel="alternate" type="text/html" title="this 바인딩 규칙" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/learn/js/this</id><content type="html" xml:base="http://localhost:4000/learn/js/this/">&lt;h1 id=&quot;this-바인딩&quot;&gt;This 바인딩&lt;/h1&gt;
 
 &lt;blockquote&gt;
@@ -14,7 +14,7 @@
 &lt;h2 id=&quot;css도-수정하자-할게-많다&quot;&gt;CSS도 수정하자!! 할게 많다.&lt;/h2&gt;</content><author><name>Chanyeon Kim</name></author><category term="css3" /><category term="css" /><category term="layout" /><summary type="html">CSS3</summary></entry><entry><title type="html">17년 12월 21일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-11/" rel="alternate" type="text/html" title="17년 12월 21일 수업 내용 정리" /><published>2017-12-21T00:00:00+09:00</published><updated>2017-12-21T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-11</id><content type="html" xml:base="http://localhost:4000/learn/til/js-11/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 잘 몰랐거나 조금이라도 헷갈릴 수 있는 부분은 모두 발췌했다.&lt;/p&gt;
+  &lt;p&gt;패스트캠퍼스 김승하 강사님의 수업 내용 중 정확히 몰랐거나 헷갈렸던  내용을 모두 발췌함.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;4-day&quot;&gt;4 Day&lt;/h2&gt;
@@ -1526,7 +1526,7 @@
           &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;'hello'&lt;/code&gt;&lt;/li&gt;
           &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;{prop: 1}&lt;/code&gt;&lt;/li&gt;
           &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 2, 3]&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;``function(x, y) { return x + y }`&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;function(x, y) { return x + y }&lt;/code&gt;&lt;/li&gt;
           &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;(x, y) =&amp;gt; x + y&lt;/code&gt;&lt;/li&gt;
         &lt;/ol&gt;
       &lt;/li&gt;
@@ -1712,6 +1712,34 @@
 
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.dataset&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;410-노드-간-관계&quot;&gt;4.10 노드 간 관계&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.childNodes&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.firstChild&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.lastChild&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.previousSibling&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.nextSibling&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.parentNode&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.offsetParent&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;411-엘리먼트-크기-및-위치&quot;&gt;4.11 엘리먼트 크기 및 위치&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.getBoundingClientRect()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.offsetHeight&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;el.offsetWidth&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.clientHeight&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;el.clientWidth&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.scrollHeight&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;el.scrollWidth&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.offsetTop&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;el.offsetLeft&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.scrollTop&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;el.scrollLeft&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;el.clientTop&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;el.clientLeft&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Chanyeon Kim</name></author><category term="til" /><category term="패스트캠퍼스" /><category term="til" /><category term="js" /><category term="javascript" /><summary type="html">Today I Learned</summary></entry><entry><title type="html">17년 12월 18일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-09/" rel="alternate" type="text/html" title="17년 12월 18일 수업 내용 정리" /><published>2017-12-18T00:00:00+09:00</published><updated>2017-12-18T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-09</id><content type="html" xml:base="http://localhost:4000/learn/til/js-09/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
 
 &lt;blockquote&gt;

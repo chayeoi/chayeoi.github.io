@@ -671,8 +671,8 @@ progress {
  * Remove the default vertical scrollbar in IE.
  */
 textarea {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  /* overflow: auto;
+  -webkit-overflow-scrolling: touch; */
 }
 
 /**
@@ -822,8 +822,8 @@ blockquote {
 
 pre {
   padding: 16px 32px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  /* overflow-x: auto;
+  -webkit-overflow-scrolling: touch; */
 }
 
 pre code {
@@ -1042,8 +1042,8 @@ pre code {
 
 .results-search {
   list-style: none;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  /* overflow: auto;
+  -webkit-overflow-scrolling: touch; */
   height: 90vh;
   margin: 0;
   padding: 0;
