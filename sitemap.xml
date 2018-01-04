@@ -121,6 +121,14 @@
 <lastmod>2018-01-01T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/learn/til/js-12/</loc>
+<lastmod>2018-01-02T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/learn/til/js-13/</loc>
+<lastmod>2018-01-02T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -148,6 +156,9 @@
 <loc>http://localhost:4000/page/5.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/page/6.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/js/</loc>
 </url>
 <url>
@@ -158,5 +169,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/til/page/3.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/til/page/4.html</loc>
 </url>
 </urlset>
