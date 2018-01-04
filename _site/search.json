@@ -1,6 +1,22 @@
 [
   
     {
+      "title"    : "17년 12월 21일 수업 내용 정리",
+      "category" : "til",
+      "tags"     : "패스트캠퍼스, til, js, javascript",
+      "url"      : "/learn/til/js-13/",
+      "date"     : "2018-01-02 00:00:00 +0900"
+    } ,
+  
+    {
+      "title"    : "17년 12월 21일 수업 내용 정리",
+      "category" : "til",
+      "tags"     : "패스트캠퍼스, til, js, javascript",
+      "url"      : "/learn/til/js-12/",
+      "date"     : "2018-01-02 00:00:00 +0900"
+    } ,
+  
+    {
       "title"    : "this 바인딩 규칙",
       "category" : "js",
       "tags"     : "js, javascript, this",
