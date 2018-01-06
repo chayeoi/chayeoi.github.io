@@ -35,6 +35,10 @@ discus_identifier: y2oniary # Add your discus identifier
 # Tracker
 analytics: # Google Analytics
 
+# # Paginate
+# paginate: 6
+# paginate_path: /page:num/
+
 # Build settings
 markdown: kramdown
 plugins:
