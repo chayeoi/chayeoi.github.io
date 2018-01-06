@@ -1,7 +1,7 @@
 <header class="main-header">
   <div class="header-wrapper">
     <div class="header-flex">
-      <h1 class="logo"><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
+      <h1 class="logo"><a href="{{site.baseurl}}/" title="홈 화면">{{ site.title }}</a></h1>
       <div class="menu-icon-container">
         <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
       </div>
@@ -9,12 +9,9 @@
         <h2 class="nav-heading-invisible">네비게이션</h2>
         <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
         <ul>
-          <li><a href="{{site.baseurl}}/">Home</a></li>
-          <li><a href="{{site.baseurl}}/about">About</a></li>
-          <li><a href="{{site.baseurl}}/html5">HTML5</a></li>
-          <li><a href="{{site.baseurl}}/css3">CSS3</a></li>
-          <li><a href="{{site.baseurl}}/js">Javascript</a></li>
-          <li><a href="{{site.baseurl}}/til">Today I Learned</a></li>
+          {% for category in site.data.navigation %}
+            <li><a href="{{site.baseurl}}{{category.url}}" title="{{category.desc}}">{{category.title}}</a></li>
+          {% endfor %} 
         </ul>
       </nav>
       <div class="search-icon-container">

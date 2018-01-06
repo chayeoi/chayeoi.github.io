@@ -42,7 +42,7 @@ pagination:
     limit: 0
     sort_field: "date"
     sort_reverse: true
-    permalink: '/page/:num'
+    permalink: '/page/:num/'
 
 # Build settings
 markdown: kramdown

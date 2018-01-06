@@ -2091,6 +2091,6 @@ pre code {
 
 /* a11ly */
 
-[class*="invisible"] {
+[class$="invisible"] {
   display: none;
 }
