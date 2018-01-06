@@ -2,9 +2,10 @@
 layout: home-page
 title: Javascript
 permalink: /js/
-pagination:
-  enabled: true
-  category: js
-  per_page: 6
 ---
-{% include pages.html %}
+<h2 class="pages-heading">{{page.title}} 포스트 목록</h2>
+<ol class="post-card-box clearfix">
+  {% for post in site.categories.js %}
+    {% include pages.html %}
+  {% endfor %}
+</ol>

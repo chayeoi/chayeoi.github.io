@@ -2,9 +2,10 @@
 layout: home-page
 title: Today I Learned
 permalink: /til/
-pagination:
-  enabled: true
-  category: til
-  per_page: 6
 ---
-{% include pages.html %}
+<h2 class="pages-heading">{{page.title}} 포스트 목록</h2>
+<ol class="post-card-box clearfix">
+  {% for post in site.categories.til %}
+    {% include pages.html %}
+  {% endfor %}
+</ol>

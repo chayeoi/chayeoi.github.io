@@ -35,21 +35,12 @@ discus_identifier: y2oniary # Add your discus identifier
 # Tracker
 analytics: # Google Analytics
 
-# Paginate (v2)`
-pagination:
-    enabled: true
-    per_page: 2
-    limit: 0
-    sort_field: "date"
-    sort_reverse: true
-    permalink: '/page/:num/'
-
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
