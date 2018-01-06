@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>17년 11월 27일 수업 내용 정리 - Oh My Charlie</title>
+	<meta name="description" content="패스트캠퍼스 프론트엔드 스쿨 수업 내용 정리 (nodejs)">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="flex-container">
+  <header class="main-header">
+  <div class="header-wrapper">
+    <div class="header-flex">
+      <h1 class="logo"><a href="/" title="홈 화면">Oh My Charlie</a></h1>
+      <div class="menu-icon-container">
+        <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </div>
+      <nav class="main-nav">
+        <h2 class="nav-heading-invisible">네비게이션</h2>
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          
+            <li><a href="/" title="Home">Home</a></li>
+          
+            <li><a href="/about" title="About me">About</a></li>
+          
+            <li><a href="/html5" title="HTML5">HTML5</a></li>
+          
+            <li><a href="/css3" title="CSS3">CSS3</a></li>
+          
+            <li><a href="/js" title="Javascript">Javascript</a></li>
+          
+            <li><a href="/til" title="Today I Learned">Today I Learned</a></li>
+           
+        </ul>
+      </nav>
+      <div class="search-icon-container">
+        <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+</header> <!-- End Header -->
+
+  <article class="article-page">
+    <div class="page-image">
+      <div class="cover-image" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">17년 11월 27일 수업 내용 정리</h1>
+          <div class="page-date"><time datetime="2017-11-27 00:00:00 +0900">2017, Nov 27</time></div>
+        </div>
+        <h1 id="today-i-learned">Today I Learned</h1>
+
+<h2 id="1-day">1 Day</h2>
+
+<h3 id="1-운영체제-점유율">1. 운영체제 점유율</h3>
+
+<ol>
+  <li>서버 운영체제</li>
+</ol>
+
+<ul>
+  <li>리눅스: 96.91%</li>
+  <li>윈도: 1.78%</li>
+  <li>FreeBS(맥): 1.31%</li>
+</ul>
+
+<p>→ 실제 서버를 운영할 때에는 리눅스를 써야 한다!</p>
+
+<ol>
+  <li>PC 운영체제</li>
+</ol>
+
+<ul>
+  <li>윈도: 90%</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="2-운영체제의-역사와-linux">2. 운영체제의 역사와 Linux</h3>
+
+<ol>
+  <li>
+    <p>Unix → Linux</p>
+
+    <p>​	 → DOS → Windows(10 버전부터 리눅스 셸인 Bash를 지원)</p>
+
+    <p>​	 → FreeBSD  → Mac OS</p>
+  </li>
+  <li>
+    <p>결국은 모두 UNIX의 자손들이고 친척이다.</p>
+  </li>
+  <li>
+    <p>UNIX가 유료로 운영되며 무료로 쓸 수 있는 것이 사라졌고 상표를 그대로 쓸 수 없었기 때문에 ‘리누스 토르발스’가 Linux를 무료로 만들어서 배포하기 시작했다. 슈퍼 컴퓨터는 수많은 컴퓨터를 엮어서 쓰기 때문에 Unix를 쓰는 데에는 비용이 많이 들기 때문에 Linux를 쓸 수 밖에 없었다.</p>
+  </li>
+  <li>
+    <p>안드로이드, 아이폰, 아마존 웹서비스의 EC2 컴퓨터 모두 리눅스 기반이다.</p>
+  </li>
+  <li>
+    <p><a href="https://ko.wikipedia.org/wiki/%EC%8B%9C%ED%81%90%EC%96%B4_%EC%85%B8">ssh</a>라는 셸 터미널로 원격 컴퓨터에 접속을 하게 되는데, 역시 리눅스를 알아야 한다.</p>
+  </li>
+  <li>
+    <p>맥에서는 <code class="highlighter-rouge">brew install</code>로 쉽게 설치할 수 있다.</p>
+  </li>
+  <li>
+    <p>간단히 노트북에 Linux를 깔아서 사용할 수도 있다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="3-aws">3. AWS</h3>
+
+<h4 id="31-탄생-배경">3.1 탄생 배경</h4>
+
+<ol>
+  <li>아마존 웹 서비스의 탄생 배경은 다음과 같다. 전자 쇼핑몰을 운영하던 아마존에서 블랙 프라이데이에 트래픽이 몰리는 일에 대응하기 위해 수많은 가상 컴퓨터를 구입했다. 그러나 쓸 데가 없어져서 개발자들을 쥐어짰고 그렇게 해서 탄생하게 되었다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="32-이용-기간">3.2 이용 기간</h4>
+
+<ol>
+  <li>아마존 웹 서비스(AWS)를 이용하면 1년동안 서버를 무료로 사용할 수 있다. 그러나 새로운 이메일로 또 가입할 수 있기 때문에 결국 평생 무료이다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="4-react">4. React</h3>
+
+<h4 id="41-특징">4.1 특징</h4>
+
+<ol>
+  <li>컴포넌트</li>
+  <li>Virtual DOM</li>
+  <li>단방향 데이터 플로우</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="5-jquery의-단점">5. jQuery의 단점</h3>
+
+<ol>
+  <li>jQuery로는 DOM을 컨트롤하기 불편하다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="6-cloud-computing">6. Cloud Computing</h3>
+
+<h4 id="61-클라우드-서비스">6.1 클라우드 서비스</h4>
+
+<ol>
+  <li>Google Drive</li>
+  <li>iCloud</li>
+  <li>Naver Cloud</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="7-컴퓨터의-작동-원리">7. 컴퓨터의 작동 원리</h3>
+
+<ol>
+  <li>컴퓨터의 자동 원리는 논리 회로이다.</li>
+  <li>하드웨어와 소프트웨어 사이에 커널이 있다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="8-서버와-클라이언트">8. 서버와 클라이언트</h3>
+
+<ol>
+  <li>클라이언트 - 브라우저(소프트웨어)</li>
+  <li>서버 - 웹 서버(소프트웨어)</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="9-nosql">9. noSQL</h3>
+
+<h4 id="91-sql과-nosql">9.1 SQL과 noSQL</h4>
+
+<ol>
+  <li>SQL(Structured Query Language)은 관계형 데이터베이스를 의미한다.</li>
+  <li>noSQL(not only sql)은 관계형 데이터베이스가 아닌 것을 말한다. 대표적으로 MongoDB가 있다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="92-mongodb">9.2 MongoDB</h4>
+
+<ol>
+  <li>MongoDB의 어원은 humongous(거대한)이다.</li>
+  <li>MongoDB는 Javascript 형태로 만들어져있다. (JSON)</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="10-json">10. JSON</h3>
+
+<ol>
+  <li>JSON(JavaScript Object Notation)은 Javascript에서 객체를 표현하는 방법이라는 뜻이다.</li>
+  <li>이전에는 데이터를 문자열 형태로 자료를 주고받았고, 그 부분이 힘이 들어서 XML이 나왔는데 XML은 태그들이 너무 많이 중첩되서 표현되는 부분이 잡다해서 네트워크를 타고 흐르기에는 적합하지 않았다. 그렇게 해서 JSON으로 넘어가게 되었다.</li>
+  <li>JSON은 현재 데이터를 주고받는 표준이다.</li>
+  <li>Javascript 입장에서 서버에서 작업한 것이 그대로 자신의 형태로 넘어온다면 이것은 엄청난 장점이다.</li>
+  <li>MongoDB에서 넘어온 데이터를 JSON 형식으로 저장하는데, 이는 데이터베이스까지 모든 기술을 자바스크립트로 사용할 수 있음을 뜻한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="11-프론트엔드와-백엔드">11. 프론트엔드와 백엔드</h3>
+
+<ol>
+  <li>서버로 Open API를 요청하는 것이 프론트엔드의 역할이며, 서버에서는 응답을 처리한다.</li>
+  <li>이전에는 서버에서 응답 결과로 항상 html 문서만 보내줘서, 전체 중에서 일부만 바뀌었음에도 매번 새로 받아야 했다. 이러한 부분을 개선하기 위한 방법으로 AJAX가 등장했고, AJAX 방식을 통해 필요한 부분에 대한 데이터만 JSON 형식으로 받아서 교체할 수 있게 되었다. 이것으로 속도 문제가 해결되고 서버의 부하가 줄어들었다.</li>
+  <li>모바일에서도 마찬가지로 JSON 형식의 데이터를 가져와서 바뀔 부분만 html 코드로 변환하여 Javascript로 화면에 뿌려주게 된다. React가 이러한 일을 담당한다. 따라서 데이터 저장이 되지 않는 것들은 서버가 필요없지만 데이터 저장이 필요한 것은 서버가 필요하다.</li>
+  <li>프론트엔드에선 서버에서 받은 데이터를 끼워맞추는 일을 처리한다.</li>
+  <li>서버에선 요청을 받아서 클라이언트에 보내주는 일을 처리한다.</li>
+  <li>클라이언트가 서버에 요청을 하면 MongoDB에선 그 데이터를 가져와서 보여준다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="12-nvmnode-version-manager">12. NVM(Node Version Manager)</h3>
+
+<ol>
+  <li>
+    <p>내 컴퓨터에서 사용하는 node.js의 버전이 서버와 다르면 문제가 될 수 있는데, NVM은 버전을 관리함으로써 이런 문제를 해결할 수 있게 한다.</p>
+  </li>
+  <li>
+    <p>brew를 통해 설치할 수 있다.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install nvm
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>https://github.com/creationix/nvm에서 코드를 복사해 다음과 같이 설치할 수도 있다.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+
+<span class="nb">export </span><span class="nv">NVM_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.nvm"</span>
+<span class="o">[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">.</span> <span class="s2">"</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh"</span> <span class="c"># This loads nvm</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>삼성이 node.js를 인수했다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="13-ecmascript">13. ECMAscript</h3>
+
+<ol>
+  <li>Internet Explorer가 ES5를 사용한다.</li>
+  <li>Chrome, Firefox, Safari, Opera 등의 브라우저들은 항상 최신 Spec을 사용한다. 이러한 브라우저들은 항상 새로운 버전을 사용하기 때문에 Ever-green Browser라고도 한다.</li>
+  <li>ES6(2015), ES7(2016), ES8(2017) 버전까지 나온 상태이고, 보통 ES6 이상을 통틀어 ES6라고 이야기한다.</li>
+  <li>node.js에서는 ES6를 지원하고 있지만, 프론트엔드에선 지원을 못해서 Babel 패키지를 이용하여 ES6로 작성한 코드를 ES5로 변환해줘야 한다. 모든 브라우저들이 ES6를 100% 완벽하게 지원하고 있는 상황은 아니다.</li>
+  <li>책 추천
+    <ol>
+      <li>러닝 자바스크립트(ES6로 제대로 입문하는 모던 자바스크립트 웹 개발)</li>
+      <li>블루 프린트</li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="14-functional-programming">14. Functional Programming</h3>
+
+<ol>
+  <li>기존 OOP에서 불가능하고 문제가 되었던 부분들을 FP에서 해결할 수 있기 때문에 현재 함수형 프로그래밍으로 무게 중심이 넘어가고 있다.</li>
+  <li>OOP에서 대표적인 문제로 멀티 스레드가 있었는데, 멀티 스레드 환경에선 100% 안전한 코드가 존재하지 않는다. 동시에 들어가기 때문에 변수가 생길 수 있기 때문이다.</li>
+  <li>Javascript는 OOP와 FP의 성격을 모두 가지고 있다. 하지만 함수형으로 가고자 한다.</li>
+  <li>PC에도 코어(CPU)가 4 ~ 8개가 붙고, 서버에는 더 많이 붙는다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="15-c10k-problem">15. C10K Problem</h3>
+
+<ol>
+  <li>C10K Problem은 하나의 System에 얼마나 많은 Client가 붙을 수 있냐는 의문과 그에 대한 도전에서 제기되는 문제이다.</li>
+  <li>한 사람당 하나의 스레드가 만들어진다고 하자. 한 스레드가 10MB 정도의 용량을 차지한다고 할때 1만명이 접속한다면 10만MB, 즉 100GB가 필요하다. 서버 1대로 100GB를 감당할 수 없다. 따라서 스레드를 무작정 많이 띄우는 것은 답이 아니다. Context Switching 비용이 훨씬 많이 든다.</li>
+  <li>스레드를 만드는 것이 근본적인 해결책이 아니다. 이것을 요청이 들어왔을 때 하나를 처리하고 넘기는 이벤트 기반의 함수형 기법으로 해결할 수 있다.</li>
+  <li>Javascript는 싱글 스레드 기반이다.</li>
+  <li>비동기 방식의 가장 큰 단점은 이른 바 ‘콜백 헬’이라는 것인데, async 패키지 모듈을 설치하여 비동기 형식을 동기 형식처럼 코딩할 수 있다. ES6로 넘어오면서 async_await이라는 모듈을 사용하면 더 쉽게 이 문제를 해결할 수 있다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="16-프로그램-vs-프로세스-vs-스레드">16. 프로그램 vs 프로세스 vs 스레드</h3>
+
+<h4 id="161-차이점">16.1 차이점</h4>
+
+<ol>
+  <li>프로그램: 프로그램을 실행하기 전의 상태</li>
+  <li>프로세스: 프로그램을 실행하여 메모리에 로드된 상태.</li>
+  <li>스레드: 하나의 프로세스에 종속된 작업의 단위. 하나의 프로세스 안에 여러 개의 스레드를 띄울 수 있고, 스레드를 많이 쓰면 쓸수록 더 느려지는 문제가 발생한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="162-프로세스-방식">16.2 프로세스 방식</h4>
+
+<ol>
+  <li>스레드 방식보다 용량이 작은 프로세스를 여러 개 띄워서 사용하는 것이 더 효율적이다.</li>
+  <li>보통 프로세스 하나의 용량은 크지만 scala로 만든 AKA는 프로세스 하나당 10KB밖에 차지하지 않는다.</li>
+  <li>프로세스는 CPU 코어 간에 서로 협업을 할 수 있다. 반면에 스레드는 한 프로세스 안에 갇히게 되기 때문에 다른 프로세스와 협업을 할 수 없게 된다. 그래서 프로세스 단위로 가는 것이 더 좋다.</li>
+  <li>멀티 스레드 방식에서는 스레드가 들어왔을 때 데이터를 수정하기 때문에 문제가 발생했는데, 함수형 언어는 한 번 만들어지면 변하지 않는 불변 데이터로 처리해서 동시에 몇 명이 들어오든 간에 안전하도록 처리했다. 함수형 언어는 이러한 방식으로 멀티 스레드 문제를 해결하였다.</li>
+  <li>Javascript는 ES6 이후 함수형 프로그래밍의 특징을 적극적으로 도입하였다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="17-웹-서버">17. 웹 서버</h3>
+
+<ol>
+  <li>웹 서버는 80번 포트를 사용한다. 이것은 TCP/IP 프로토콜에서의 약속이다.</li>
+  <li>보통 node.js에서는 테스트 포트로 3000번을 자주 사용한다.</li>
+  <li>현재 전 세계에서 제일 많이 쓰이는 웹 서버는 Apache이다.</li>
+  <li>Apache는 동시 접속자 수가 많아질수록 느려지지만, node.js는 일정하다.</li>
+  <li>자바스크립트 자체는 싱글 스레드이지만, 서버 사이드로 들어가게 되면 운영체제의 스레드를 사용하게 된다. 자체 멀티 스레드는 없지만 운영체제의 스레드를 빌려쓰므로 속도가 빠르다.</li>
+  <li>ngineX라는 웹 서버가 node.js처럼 이벤트 기반 비동기 방식으로 동작한다. 여기서 이벤트 기반이란, 계속 대기하는 것이 아니라 이벤트가 발생하면 그때 가서 처리하고 끝내는 방식을 말한다.</li>
+  <li>싱글 스레드도 단점이 있는데, 해당 스레드가 죽으면 서버가 끝나버린다는 것이다. 이걸 보완하기 위해 서버를 3개 이상 동시에 띄웠다가 하나가 죽었을 때 다른 걸 띄우는 방식으로 대처한다. 이러한 방식을 로드 밸런싱이라 한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="18-express-generator-nodemon-모듈">18. express-generator, nodemon 모듈</h3>
+
+<ol>
+  <li>
+    <p>express-generator 모듈을 이용해 프로젝트 개발 환경을 빠르게 구축할 수 있다.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install express-generator <span class="nt">-g</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>매번 소스를 수정할 때마다 서버를 다시 실행시키는 것은 매우 번거로운 일이다. 이것을 해결하기 위한 모듈이 nodemon이다. nodemonitor의 약어이며, -g의 선언 위치는 모듈명 앞, 뒤 어디에다 선언해도 된다.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">-g</span> nodemon
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>nodemon으로 서버를 실행할 때 확장자를 생략하면 안된다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">nodemon</span> <span class="nx">server</span><span class="p">.</span><span class="nx">js</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>nodemon으로 서버를 실행하면 콘솔에 watching이 보이는데, 변화를 지켜보고 있다는 뜻이다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="19-mvc-패턴">19. MVC 패턴</h3>
+
+<ol>
+  <li>Model: 데이터의 대부분은 DB에 존재한다.</li>
+  <li>View: html을 보내준다. 그러나 일반적인 html이 아니라 .asp, .jsp, .php와 같이 변환되기 전의 형태이다. Express는 .jade와 .ejs 템플릿을 지원한다.</li>
+  <li>Controller: 전체적인 관리를 담당한다.</li>
+  <li>Express가 C를, .ejs 템플릿이 V를 담당한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="20-html-템플릿">20. html 템플릿</h3>
+
+<ol>
+  <li>
+    <p>.jade는 닫는 기호가 없고 indent로 구분하기 때문에, 가독성이 떨어질 수도 있다.</p>
+  </li>
+  <li>
+    <p><a href="http://jade-lang.com/">JADE LANGUAGE</a></p>
+  </li>
+  <li>
+    <p>템플릿을 따로 지정하지 않으면 Express를 개발한 사람이 .ejs를 좋아했기 때문에 .ejs로 설정된다.</p>
+  </li>
+  <li>
+    <p>단순한 html은 정적인 데이터이기 때문에, 변화를 주기 위해서 이러한 템플릿을 사용한다.</p>
+  </li>
+  <li>
+    <p>&lt;%= %&gt; 안에 화면에 표시할 데이터를 입력한다.</p>
+  </li>
+  <li>
+    <p>ejs 템플릿으로 스캐폴딩하는 방법은 다음과 같다.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>express <span class="nt">--ejs</span> <span class="o">(</span>프로젝트명<span class="o">)</span>
+
+<span class="nb">cd</span> <span class="o">(</span>프로젝트명<span class="o">)</span> <span class="o">&amp;&amp;</span> npm install
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>서버를 시작하려면 다음과 같이 입력한다.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm start
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="21-packagejson">21. package.json</h3>
+
+<ol>
+  <li>
+    <p>프로젝트에 관한 정보를 담고 있는 파일이다.</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//</span><span class="w"> </span><span class="err">package.json</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myproject"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"private"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node ./bin/www"</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">'npm</span><span class="w"> </span><span class="err">start'로</span><span class="w"> </span><span class="err">'node</span><span class="w"> </span><span class="err">./bin/www'를</span><span class="w"> </span><span class="err">실행한다.</span><span class="w">
+  </span><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"body-parser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.18.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cookie-parser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.4.3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"debug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~2.6.9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ejs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~2.5.7"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"express"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~4.15.5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"morgan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.9.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"serve-favicon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~2.4.5"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="22-기본-프로젝트-구조">22. 기본 프로젝트 구조</h3>
+
+<h4 id="221-bin">22.1 ./bin</h4>
+
+<ol>
+  <li>
+    <p>포트 번호를 수정하려면 ./bin/www에서 다음 코드를 수정한다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">normalizePort</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="s1">'3000'</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>bin 폴더는 지워도 된다. 대신 app.js의 아랫 줄 위에 다음 코드를 추가해야 한다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// bin 폴더를 지운 대신 이 부분을 추가한다.</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Server started!!!'</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>bin 폴더를 지웠기 때문에 <code class="highlighter-rouge">npm start</code> 스크립트를 실행할 수 없다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="222-project-structure">22.2 Project Structure</h4>
+
+<ol>
+  <li>
+    <p>node_modules: 모듈이 설치된 저장소이다.</p>
+  </li>
+  <li>
+    <p>public: 정적인 데이터들이 저장된 폴더이다.</p>
+
+    <ol>
+      <li>images: 이미지 파일</li>
+      <li>javascripts: 서버 쪽 자바스크립트가 아닌 클라이언트 측 자바스크립트 파일</li>
+      <li>stylesheets: 스타일시트 관련 파일</li>
+    </ol>
+  </li>
+  <li>
+    <p>routes: MVC중 Controller를 담당하는 부분. index.js는 시작 파일이다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
+
+<span class="cm">/* GET home page. */</span>
+<span class="nx">router</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 결과를 렌더링한다. 첫 번째 인자에 전달된 인수는 index.ejs를 뜻한다.</span>
+  <span class="c1">// 확장자 .ejs는 생략 가능하다. app.js의 13 ~ 15번 line에서 views 폴더를 여기서</span>
+  <span class="c1">//  사용하겠다고 선언하고 view engine을 ejs로 정의해놨기 때문에 생략해도 된다.</span>
+  <span class="c1">// view engine setup</span>
+  <span class="c1">// app.set('views', path.join(__dirname, 'views'));</span>
+  <span class="c1">// app.set('view engine', 'ejs');</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'index'</span><span class="p">,</span> <span class="p">{</span> <span class="na">title</span><span class="p">:</span> <span class="s1">'Express'</span> <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">router</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>views: *.ejs 파일 형식의 view 파일이 담긴 폴더이다.</p>
+  </li>
+  <li>
+    <p>우리는 *.js와 *.ejs만 다루면 될 뿐이다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="23-routing">23. Routing</h3>
+
+<ol>
+  <li>
+    <p>’/’는 루트 위치를 의미한다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// http://localhost:5000/</span>
+<span class="nx">router</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'index'</span><span class="p">,</span> <span class="p">{</span> <span class="na">title</span><span class="p">:</span> <span class="s1">'Express'</span> <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="c1">// http://localhost:5000/abc</span>
+<span class="nx">router</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'/abc'</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'여기는 /abc 입니다!'</span><span class="p">);</span>
+<span class="p">})</span>   
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>두 번째 파라미터로 전달된 함수의 next 파라미터는 에러를 처리할 때 사용한다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="24-서버-사이드-렌더링">24. 서버 사이드 렌더링</h3>
+
+<ol>
+  <li>html은 정적인 페이지이다. 반면에 .ejs는 서버 측 렌더링을 통해서 동적으로 생성되는 페이지이다.</li>
+  <li>물론 프론트엔드 기술을 이용하여 Javascript로 고칠 수 있지만 위에서 다룬 방식은 서버에서 동적으로 페이지를 만들어낸 것이다.</li>
+  <li>클라이언트 측에서 자바스크립트 렌더링도 좋지만 때에 따라 서버 사이드 렌더링이 필요한 경우도 있다. 클라이언트 사이드 렌더링은 자바스크립트의 해석이 완료되어야 페이지가 렌더링되는데 이 부분을 검색 엔진이 알 수가 없다. 구글은 이 문제를 해결했지만 다른 회사는 해결하지 못하고 있다. 따라서 이 시점에 서버 사이드 렌더링이 필요한 것이다.</li>
+  <li>본문 내용의 어느 정도는 서버 사이드 렌더링을 통해서, 나머지는 클라이언트 사이드 렌더링을 통해 그려낸다.둘 모두 어느 정도씩 필요하다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="25-mysql과-mariadb">25. mySQL과 mariaDB</h3>
+
+<h4 id="251-역사">25.1 역사</h4>
+
+<ol>
+  <li>mySQL은 한 회사 이름이었는데, SUN에 팔렸다가 Oracle에 다시 팔리는 바람에 Oracle 입장에서는 경쟁 업체를 떠안게 되었다. 그러나 인수만 해놓고 관리를 하지 않아 사람들이 나와서 mySQL의 업그레이드 버전을 만들었는데 그것이 MariaDB이다.</li>
+  <li>mySQL 사장의 둘째 딸 이름을 따서 MariaDB로 이름지었다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="252-특징">25.2 특징</h4>
+
+<ol>
+  <li>MariaDB는 mySQl과 완벽하게 호환된다.</li>
+  <li>기본 엔코딩은 스웨덴어로 설정되어있어서 반드시 use utf-8로 설정해야 한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="253-명령어">25.3 명령어</h4>
+
+<ol>
+  <li>INSERT - CRUD에서 Create에 해당한다.</li>
+  <li>SELECT - CRUD에서 Read에 해당한다.</li>
+  <li>UPDATE - CRUD에서 Update에 해당한다.</li>
+  <li>DELETE - CRUD에서 Delete에 해당한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="26-디스크-액세스-시간">26. 디스크 액세스 시간</h3>
+
+<ol>
+  <li>디스크 액세스 시간은 CPU, RAM, HDD 순으로 빠르다. 따라서 되도록이면 하드 디스크에서 덜 읽는 것이 좋다.</li>
+  <li>CPU, RAM, HDD 사이에 캐시를 넣어서 자주 쓸 것은 미리 올려 놓는다.</li>
+  <li>데이터베이스는 디스크에서 읽어오기 때문에 속도가 느리고, 이에 디스크에서 읽지 않고 메모리에서 읽는 데이터베이스가 등장했다. 그것이 Redis라는 noSQL이다. 속도가 엄청 빠르다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="27-빅데이터">27. 빅데이터</h3>
+
+<ol>
+  <li>Apach의 Spark가 메모리에서 처리하기 때문에 Hadoop보다 100배 빠르다. 디스크에서 처리해도 10배 빠르다. 이유는 함수형 언어이기 때문이다.</li>
+  <li>Spark는 Scala로 만들어졌다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="28-rdbms">28. RDBMS</h3>
+
+<ol>
+  <li>RDB는 테이블 형태로 구성되어 있다. 반면에 MongoDB는 키와 값의 쌍으로 구성되어 있다.</li>
+  <li>Redissms 키와 값 형태로 넣는다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="29-자료구조와-알고리즘">29. 자료구조와 알고리즘</h3>
+
+<ol>
+  <li>데이터를 어떻게 넣고 관리할 것인가에 관한 것이 자료 구조이다.</li>
+  <li>데이터를 어떻게 처리할 것인가에 관한 것이 알고리즘이다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="30-기타">30. 기타</h3>
+
+<ol>
+  <li>Blog는 we<strong>B</strong> + <strong>Log</strong>의 합성어</li>
+  <li>나중에 시간이 된다면 python(머신 러닝)과 scala(빅데이터)를 배워보자!</li>
+  <li>Node.js + Electron으로 데스크톱 GUI 앱을 만들 수도 있다.</li>
+</ol>
+
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#패스트캠퍼스" class="tag">| 패스트캠퍼스</a>
+            
+            <a href="/tags#til" class="tag">| til</a>
+            
+            <a href="/tags#backend" class="tag">| backend</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=17년 11월 27일 수업 내용 정리&url=http://localhost:4000/learn/til/backend-01/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/learn/til/backend-01/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/learn/til/backend-01/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <section class="author-box">
+  <img src="/assets/img/chayeoi-profile.jpg" alt="Chanyeon Kim" class="author-img">
+  <div class="author-desc">
+    <h2>Chanyeon Kim</h2>
+    <p>자바스크립트를 무척 좋아하는 주니어 프론트엔드 개발자입니다. 현재 React.js, Vue.js, Node.js를 공부 중에 있습니다.</p>
+    <ul>
+      
+        <li class="github"><a href="http://github.com/chayeoi" title="github 저장소" target="_blank"><i class="fa fa-github"></i></a></li>
+      
+      
+        <li class="facebook"><a href="https://facebook.com/chayeoi" title="facebook 링크" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      
+      
+        <li class="instagram"><a href="https://instagram.com/chayeoi" title="instagram 링크" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      
+      <!-- 
+        <li class="email"><a href="mailto:y2oniary@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+       -->
+      <!-- 
+        <li class="phone"><a href="tel:010-2650-5090"><i class="fa fa-phone"></i></a></li>
+       -->
+      
+        <li class="website"><a href="http://chayeoi.creatorlink.net" title="포트폴리오 페이지" target="_blank"><i class="fa fa-globe"></i></a></li>
+      
+      <!-- 
+        <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+       -->
+    </ul>
+  </div>
+</section>
+        <div class="recent-box">
+  <h2 class="recent-title">Recent post</h2>
+  <div class="recent-list">
+    
+      
+        <a href="/learn/til/js-13/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/til/js-12/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/js/this/" class="recent-item" style="background: url(/assets/img/post-js.jpg) center no-repeat; background-size: cover;"><span>this 바인딩 규칙</span></a>
+      
+    
+      
+        <a href="/learn/etc/jekyll/" class="recent-item" style="background: url(/assets/img/post-etc.jpg) center no-repeat; background-size: cover;"><span>Jekyll 블로그 만들기</span></a>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
+
+        <section class="comment-area">
+  <h2 class="comment-heading-invisible">댓글</h2n>
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//y2oniary.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <p>2018 &copy; Chanyeon Kim</p>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

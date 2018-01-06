@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>17년 12월 11일 수업 내용 정리 - Oh My Charlie</title>
+	<meta name="description" content="패스트캠퍼스 프론트엔드 스쿨 수업 내용 정리 (js)">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="flex-container">
+  <header class="main-header">
+  <div class="header-wrapper">
+    <div class="header-flex">
+      <h1 class="logo"><a href="/" title="홈 화면">Oh My Charlie</a></h1>
+      <div class="menu-icon-container">
+        <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </div>
+      <nav class="main-nav">
+        <h2 class="nav-heading-invisible">네비게이션</h2>
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          
+            <li><a href="/" title="Home">Home</a></li>
+          
+            <li><a href="/about" title="About me">About</a></li>
+          
+            <li><a href="/html5" title="HTML5">HTML5</a></li>
+          
+            <li><a href="/css3" title="CSS3">CSS3</a></li>
+          
+            <li><a href="/js" title="Javascript">Javascript</a></li>
+          
+            <li><a href="/til" title="Today I Learned">Today I Learned</a></li>
+           
+        </ul>
+      </nav>
+      <div class="search-icon-container">
+        <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+</header> <!-- End Header -->
+
+  <article class="article-page">
+    <div class="page-image">
+      <div class="cover-image" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">17년 12월 11일 수업 내용 정리</h1>
+          <div class="page-date"><time datetime="2017-12-11 00:00:00 +0900">2017, Dec 11</time></div>
+        </div>
+        <h1 id="today-i-learned">Today I Learned</h1>
+
+<blockquote>
+  <p>패스트캠퍼스 김승하 강사님의 수업 내용 중 정확히 몰랐거나 헷갈렸던  내용을 모두 발췌함.</p>
+</blockquote>
+
+<h2 id="1-day">1 Day</h2>
+
+<h3 id="1-array">1. Array</h3>
+
+<h4 id="11-arrayof">1.1 Array.of()</h4>
+
+<ol>
+  <li>
+    <p>일관적이지 못한 생성자의 동작방식 때문에, ES2015에 <code class="highlighter-rouge">Array.of</code> 정적 메소드가 추가되었다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Array</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// [1]</span>
+<span class="nb">Array</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// [1, 2, 3]</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="12-다른-객체로부터-배열-생성하기">1.2 다른 객체로부터 배열 생성하기</h4>
+
+<ol>
+  <li>
+    <p>JavaScript에는 유사 배열 객체(array-like object)와 iterable이라는 개념이 있어서, 이에 해당하는 값들은 <code class="highlighter-rouge">Array.from</code> 정적 메소드를 통해 배열로 쉽게 변환될 수 있다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// `string` 타입은 래퍼 객체를 통해 iterable로 다루어질 수 있다.</span>
+<span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span> <span class="c1">// ["h", "e", "l", "l", "o"]</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="13-요소-수정하기">1.3 요소 수정하기</h4>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">fill</code> 메소드를 사용하면 한꺼번에 많은 요소를 같은 값으로 바꾸어 버릴 수도 있다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+
+<span class="c1">// 전체를 0으로 채우기</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 0, 0, 0, 0, 0 ];</span>
+
+<span class="c1">// 인덱스 2와 4 사이를 1로 채우기</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [ 0, 0, 1, 1, 0 ];</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="14-배열-정렬하기">1.4 배열 정렬하기</h4>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">sort</code> 메소드의 인자에는 <strong>비교 함수</strong>를 넘겨주어야 한다. 비교 함수는 인자 두 개를 받아서, 아래의 조건에 따라 잘 정렬되도록 적절한 값을 반환해주어야 한다.</p>
+  </li>
+  <li>
+    <p>만약 어떤 두 값 <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">b</code>에 대해서 비교 함수 <code class="highlighter-rouge">compare</code>를 <code class="highlighter-rouge">compare(a, b)</code>와 같이 호출했을 때</p>
+
+    <ol>
+      <li>음수를 반환하면, <code class="highlighter-rouge">a</code>가 <code class="highlighter-rouge">b</code> 앞에 오도록 정렬한다.</li>
+      <li>0을 반환하면, <code class="highlighter-rouge">a</code>와 <code class="highlighter-rouge">b</code>를 같은 순서로 간주한다.</li>
+      <li>양수를 반환하면, <code class="highlighter-rouge">b</code>가 <code class="highlighter-rouge">a</code> 앞에 오도록 정렬한다.</li>
+    </ol>
+  </li>
+  <li>
+    <p>따라서, 어떤 배열을 정렬할 때에는 <strong>어떤 값을 기준으로 정렬할 지</strong>를 생각해 본 다음, 정렬함수를 만들 때 <strong>오름차순으로 정렬할 지, 내림차순으로 정렬할 지</strong>를 생각해보면 된다. 예를 들어, <strong>문자열의 길이를 기준으로 내림차순 정렬</strong>을 하고 싶다면 아래와 같이 하면 된다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Denton'</span><span class="p">,</span> <span class="s1">'Kathleen'</span><span class="p">,</span> <span class="s1">'Ebba'</span><span class="p">,</span> <span class="s1">'Bruce'</span><span class="p">];</span>
+<span class="nx">names</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">y</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">x</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">names</span><span class="p">);</span> <span class="c1">// [ 'Kathleen', 'Denton', 'Bruce', 'Ebba' ]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>여기서 주의할 점이 하나 있는데, 비교 함수를 넘기지 않더라도 정렬이 잘 되는 것처럼 보일 수 있다. 하지만 비교 함수를 인자로 넘겨주지 않으면, <strong>sort 메소드는 먼저 요소를 전부 문자열로 변환한 후, 유니코드 코드포인트를 비교하는 방식으로 정렬한다.</strong> 따라서 기대했던 것과는 전혀 다른 결과가 나올 수 있으니, <code class="highlighter-rouge">sort</code> 함수를 사용할 때는 꼭 비교함수를 넘겨주자.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="15-배열의-순회">1.5 배열의 순회</h4>
+
+<h5 id="151-forof-구문">1.5.1 <code class="highlighter-rouge">for...of</code> 구문</h5>
+
+<ol>
+  <li>ES2015에 도입된 <code class="highlighter-rouge">for...of</code> 구문은, 역시 ES2015에 도입된 <strong>iterable</strong>을 순회하기 위해 사용할 수 있다. 배열 역시 iterable이므로, <code class="highlighter-rouge">for...of</code> 구문을 사용해 순회할 수 있다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="16-배열로부터-새로운-값-생성">1.6 배열로부터 새로운 값 생성</h4>
+
+<h5 id="161-reduce">1.6.1 reduce</h5>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">reduce</code> 메소드는 모든 요소의 값을 <strong>종합</strong>해서 하나의 값으로 만드는 계산을 할 때 사용한다.</p>
+  </li>
+  <li>
+    <p>아래 코드에서 일어나는 일을 순서대로 나열하면 다음과 같다.</p>
+
+    <ol>
+      <li>초기값 <code class="highlighter-rouge">0</code>과 배열의 첫 번째 요소인 <code class="highlighter-rouge">1</code>을 인자로 해서 함수를 호출한다. 즉, <code class="highlighter-rouge">acc</code> 매개변수에 <code class="highlighter-rouge">0</code>이 대입되고, <code class="highlighter-rouge">item</code> 매개변수에 <code class="highlighter-rouge">1</code>이 대입됩니다. 결과값은 <code class="highlighter-rouge">1</code>이 됩니다. 이 값을 누적값(accumulator)이라고 부른다.</li>
+      <li>누적값 <code class="highlighter-rouge">1</code>과 배열의 두 번째 요소인 <code class="highlighter-rouge">2</code>를 인자로 해서 함수를 호출한다. 결과값 <code class="highlighter-rouge">3</code>이 다시 누적값이 된다.</li>
+      <li>누적값 <code class="highlighter-rouge">3</code>과 배열의 세 번째 요소인 <code class="highlighter-rouge">3</code>을 인자로 해서 함수를 호출한다. 결과값은 <code class="highlighter-rouge">6</code>이다.</li>
+      <li>더 이상 요소가 남아있지 않으므로 <code class="highlighter-rouge">reduce</code> 호출의 결과값은 <code class="highlighter-rouge">6</code>이 된다.</li>
+    </ol>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">item</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 6</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">reduce</code>에 주어지는 함수 역시 <code class="highlighter-rouge">forEach</code>나 <code class="highlighter-rouge">map</code>과 마찬가지로 여러 개의 인자를 받는데, 맨 앞에 누적값이 추가되어 <code class="highlighter-rouge">(누적값, 현재 요소, 인덱스, 배열)</code>와 같은 인자를 받는다.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">reduce</code> 메소드에 초기값 인자를 주지 않으면, 첫 번째 인자가 초기값으로 지정되어 첫 번째 요소와 두 번째 요소에 대한 계산부터 시작한다. 즉, 위 두 예제에서 초기값을 생략해도 같은 결과가 나온다. 다만, 배열의 요소가 하나 밖에 없다면 아래와 같이 계산이 수행되지 않고 첫 번째 요소가 그대로 반환되므로, <strong>초기값은 항상 제공해주는 것이 좋다.</strong></p>
+  </li>
+  <li>
+    <p>계산을 오른쪽부터 수행하는 <code class="highlighter-rouge">reduceRight</code> 메소드도 있다.</p>
+  </li>
+  <li>
+    <p>초기값을 따로 주지 않으면 마치 두 번째 인덱스가 첫 번째 값인 것처럼 동작한다. 그러나 우리가 받을 배열이 어떤 모양일지 모르는 상황이기 때문에 초기값을 설정하지 않는다면 원치 않는 결과를 얻게 될 수 있다. 따라서 명시적으로 초기값을 설정해주는 것이 좋다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'one'</span><span class="p">];</span>
+
+<span class="c1">// 문자열의 길이를 모두 더하려고 했지만...</span>
+<span class="c1">// 계산을 수행할 대상이 하나밖에 없어서 함수가 호출되지 못하고 결과값으로 'one'이 반환된다.</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">});</span> <span class="c1">// 'one'</span>
+
+<span class="c1">// 초기값을 주면 계산이 제대로 수행된다.</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">},</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 3</span>
+</code></pre></div>    </div>
+
+    <p>​</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="17-요소-찾기">1.7 요소 찾기</h4>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">indexOf</code>와 <code class="highlighter-rouge">lastIndexOf</code> 메소드를 사용하면 특정 요소가 배열의 몇 번째에 위치하는 지를 알아낼 수 있다.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">indexOf</code>는 배열의 왼쪽부터, <code class="highlighter-rouge">lastIndexOf</code>는 오른쪽부터 검색해서 처음 만나는 요소의 인덱스를 반환한다. 만약 일치하는 요소가 없다면, 두 메소드 모두 <code class="highlighter-rouge">-1</code>을 반환한다.</p>
+  </li>
+  <li>
+    <p>두 메소드 모두 두 번째 인자로 <strong>시작 인덱스</strong>를 받는다. 시작 인덱스가 주어지면 해당 인덱스부터 검사를 시작한다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">];</span>
+
+<span class="nx">arr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// 3</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">'b'</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// 1</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">find</code> 메소드와 <code class="highlighter-rouge">findIndex</code> 메소드를 사용하면 특정 조건을 만족하는 요소를 찾을 수 있다. 두 메소드 모두 predicate을 이용해 왼쪽부터 검사해서 처음 만나는 요소를 찾는다. <code class="highlighter-rouge">find</code>는 요소 자체를 반환하며, <code class="highlighter-rouge">findIndex</code>는 요소의 인덱스를 반환한다는 차이점이 있다. 조건을 만족하는 요소를 찾지 못하면, <code class="highlighter-rouge">find</code>는 <code class="highlighter-rouge">undefined</code>를, <code class="highlighter-rouge">findIndex</code>는 <code class="highlighter-rouge">-1</code>을 반환한다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Denton'</span><span class="p">,</span> <span class="s1">'Kathleen'</span><span class="p">,</span> <span class="s1">'Ebba'</span><span class="p">,</span> <span class="s1">'Bruce'</span><span class="p">];</span>
+
+<span class="nx">names</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">);</span> <span class="c1">// 'Ebba'</span>
+<span class="nx">names</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">);</span> <span class="c1">// 2</span>
+
+<span class="nx">names</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">);</span> <span class="c1">// undefined</span>
+<span class="nx">names</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">);</span> <span class="c1">// -1</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="18-배열인지-아닌지-판별하기">1.8 배열인지 아닌지 판별하기</h4>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">arr instanceof Array</code>와 같이 할 수 있다고 생각하실지도 모르지만, 아래와 같이 <code class="highlighter-rouge">instanceof</code> 연산자를 속이는 것은 매우 쉬운 일이므로, 어떤 값이 배열인지 아닌지 판별하기 위해서는 꼭 용도에 맞는 <code class="highlighter-rouge">Array.isArray</code>를 사용하자.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nb">Object</span><span class="p">.</span><span class="nx">setPrototypeOf</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+<span class="nx">obj</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">;</span> <span class="c1">// true</span>
+<span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span> <span class="c1">// false</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="19-정규-표현식">1.9 정규 표현식</h4>
+
+<ol>
+  <li><code class="highlighter-rouge">split(/\s+/)</code>에서 <code class="highlighter-rouge">/\s+/</code>은 연속된 1개 이상의 공백을 의미한다.</li>
+</ol>
+
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#패스트캠퍼스" class="tag">| 패스트캠퍼스</a>
+            
+            <a href="/tags#til" class="tag">| til</a>
+            
+            <a href="/tags#js" class="tag">| js</a>
+            
+            <a href="/tags#javascript" class="tag">| javascript</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=17년 12월 11일 수업 내용 정리&url=http://localhost:4000/learn/til/js-05/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/learn/til/js-05/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/learn/til/js-05/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <section class="author-box">
+  <img src="/assets/img/chayeoi-profile.jpg" alt="Chanyeon Kim" class="author-img">
+  <div class="author-desc">
+    <h2>Chanyeon Kim</h2>
+    <p>자바스크립트를 무척 좋아하는 주니어 프론트엔드 개발자입니다. 현재 React.js, Vue.js, Node.js를 공부 중에 있습니다.</p>
+    <ul>
+      
+        <li class="github"><a href="http://github.com/chayeoi" title="github 저장소" target="_blank"><i class="fa fa-github"></i></a></li>
+      
+      
+        <li class="facebook"><a href="https://facebook.com/chayeoi" title="facebook 링크" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      
+      
+        <li class="instagram"><a href="https://instagram.com/chayeoi" title="instagram 링크" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      
+      <!-- 
+        <li class="email"><a href="mailto:y2oniary@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+       -->
+      <!-- 
+        <li class="phone"><a href="tel:010-2650-5090"><i class="fa fa-phone"></i></a></li>
+       -->
+      
+        <li class="website"><a href="http://chayeoi.creatorlink.net" title="포트폴리오 페이지" target="_blank"><i class="fa fa-globe"></i></a></li>
+      
+      <!-- 
+        <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+       -->
+    </ul>
+  </div>
+</section>
+        <div class="recent-box">
+  <h2 class="recent-title">Recent post</h2>
+  <div class="recent-list">
+    
+      
+        <a href="/learn/til/js-13/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/til/js-12/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/js/this/" class="recent-item" style="background: url(/assets/img/post-js.jpg) center no-repeat; background-size: cover;"><span>this 바인딩 규칙</span></a>
+      
+    
+      
+        <a href="/learn/etc/jekyll/" class="recent-item" style="background: url(/assets/img/post-etc.jpg) center no-repeat; background-size: cover;"><span>Jekyll 블로그 만들기</span></a>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
+
+        <section class="comment-area">
+  <h2 class="comment-heading-invisible">댓글</h2n>
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//y2oniary.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <p>2018 &copy; Chanyeon Kim</p>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

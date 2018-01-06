@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>17년 11월 30일 수업 내용 정리 - Oh My Charlie</title>
+	<meta name="description" content="패스트캠퍼스 프론트엔드 스쿨 수업 내용 정리 (nodejs)">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="flex-container">
+  <header class="main-header">
+  <div class="header-wrapper">
+    <div class="header-flex">
+      <h1 class="logo"><a href="/" title="홈 화면">Oh My Charlie</a></h1>
+      <div class="menu-icon-container">
+        <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </div>
+      <nav class="main-nav">
+        <h2 class="nav-heading-invisible">네비게이션</h2>
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          
+            <li><a href="/" title="Home">Home</a></li>
+          
+            <li><a href="/about" title="About me">About</a></li>
+          
+            <li><a href="/html5" title="HTML5">HTML5</a></li>
+          
+            <li><a href="/css3" title="CSS3">CSS3</a></li>
+          
+            <li><a href="/js" title="Javascript">Javascript</a></li>
+          
+            <li><a href="/til" title="Today I Learned">Today I Learned</a></li>
+           
+        </ul>
+      </nav>
+      <div class="search-icon-container">
+        <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+</header> <!-- End Header -->
+
+  <article class="article-page">
+    <div class="page-image">
+      <div class="cover-image" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">17년 11월 30일 수업 내용 정리</h1>
+          <div class="page-date"><time datetime="2017-11-30 00:00:00 +0900">2017, Nov 30</time></div>
+        </div>
+        <h1 id="today-i-learned">Today I Learned</h1>
+
+<h2 id="4-day">4 Day</h2>
+
+<h3 id="1-activity">1. Activity</h3>
+
+<ol>
+  <li>적응형 웹 디자인은 들어오는 사용자의 디바이스를 감지해서 그에 적합한 마크업과 CSS를 제공하는 것을 뜻한다.</li>
+  <li>반응형은 마크업을 한번만 하면 된다는 장점이 있다.</li>
+  <li>제공하려는 정보가 많지 않을 경우 반응형이 매우 좋을 수 있지만, 포털 사이트와 같이 굉장히 많은 내용을 제공해야 하는 사이트라면 어려울 수 있다.</li>
+  <li>제공되는 내용은 많지 않은데 웹과 모바일을 모두 대응해야 하는 상황이라면 반응형으로 제작하는게 오히려 나을 수 있다.</li>
+  <li>상황에 따라 적응형과 반응형 중 어떤 것으로 대응하는 것이 더 좋을지 고민해야 한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="2-관계형-데이터베이스-rdbms">2. 관계형 데이터베이스 (RDBMS)</h3>
+
+<ol>
+  <li>관계형 데이터베이스 시스템에서 데이터는 포도 알, 데이터베이스는 포도송이에 비유할 수 있다.</li>
+  <li>mariaDB는 이러한 데이터베이스를 쉽게 다룰 수 있도록 해주는 소프트웨어이다.</li>
+  <li>데이터베이스는 2차원 테이블이 여러개 있는 것이라 생각하면 된다.</li>
+  <li>A,B,C 테이블이 있을 때, 서로 간에 어떤 연관을 맺고 있는 줄 알아야 각 테이블이 서로의 테이블을 참조할 수 있다. 그것을 관계라고 한다.</li>
+  <li>관계를 맺으려면 서로 간에 연결 고리가 있어야 한다. 그 연결 고리로 프라이머리 키가 존재한다. 모든 테이블에는 프라이머리 키(PK)가 존재하고 그 프라이머리 키가 다른 테이블에 연결이 되어있다. 그 프라이머리키를 다른 테이블에 집어넣음으로써 관계를 맺을 수 있다. 이러한 형태로 각 테이블과 테이블이 관계를 맺고 있다.</li>
+  <li>간단한 예로 회원 테이블과 게시판 테이블이 있다고 가정할 때, 회원 테이블과 게시판 테이블의 PK는 각각 회원 ID, 글 번호라고 하자. 글을 작성할 때 글쓴이 대신 회원 ID를 집어 넣게 되면 게시판 입장에서 해당 회원 ID를 찾아가면 해당 회원에 대한 데이터를 알 수 있을 것이다. 이러한 형식으로 회원 테이블과 게시판 테이블이 관계를 맺고 있고 결국 모든 테이블이 이와 같은 방법으로 모두 연결되어 있다.</li>
+  <li>모든 테이블은 PK를 가져야 하고 회원 테이블의 PK가 게시판 테이블에 저장이 되면, 게시판 테이블에서 회원 테이블로 가서 해당 회원의 정보를 알아낼 수 있다. 각 테이블의 PK가 다른 테이블로 넘어갈 때 그것을 FK(Foreign Key, 외래 키)라고 한다. 회원 테이블의 회원 ID는 회원 테이블에서는 PK였지만, 게시판 테이블에서는 FK가 된다.</li>
+  <li>PK가 필요한 이유는 게시판 테이블에 존재하는 PK를 통해 회원 테이블을 찾아가서 해당 정보를 알아내기 위해서이다.</li>
+  <li>프라이머리 키와 비슷한 유니크 키란 것이 있는데, 차이점은 유니크 키는 NULL도 하나의 값으로 넣을 수 있다는 것이다. 두 개를 넣을 수는 없다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="3-웹-서버와-모바일-서버">3. 웹 서버와 모바일 서버</h3>
+
+<ol>
+  <li>웹 서버와 모바일 서버는 한 끝 차이다. 굳이 구분을 하긴 하지만 실은 같은 것이다.</li>
+  <li>웹 서버는 결과를 html로 돌려주고 모바일 서버는 json으로 돌려준다.</li>
+  <li>Express에서 html로 돌려줄 때는 <code class="highlighter-rouge">res.render()</code>로, json으로 돌려줄 때는 <code class="highlighter-rouge">res.json</code>으로 보낸다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="4-mysql-모듈-사용하기">4. mySQL 모듈 사용하기</h3>
+
+<ol>
+  <li>
+    <p>다음은 mySQL 모듈을 사용하는 간단한 예제 코드이다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">mysql</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"mysql"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">host</span><span class="p">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
+  <span class="na">user</span><span class="p">:</span> <span class="s2">"root"</span><span class="p">,</span>
+  <span class="na">password</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+  <span class="na">database</span><span class="p">:</span> <span class="s2">"test"</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">connection</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+
+<span class="nx">connection</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+
+<span class="nx">connection</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s2">"SELECT 1 + 1 AS solution"</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"The solution is: "</span><span class="p">,</span> <span class="nx">results</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">solution</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">connection</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">createConnection()</code>에 인자로 전달되는 객체는 데이터베이스 연결에 대한 정보를 담고 있다.</p>
+
+    <ol>
+      <li><code class="highlighter-rouge">host</code>는 데이터베이스가 저장되어있는 컴퓨터를 알려주는 부분이다. 이때 localhost 또는 127.0.0.1은 자신의 컴퓨터를 뜻한다.</li>
+      <li>데이터베이스에 접속하려면 사용자명과 비밀번호가 필요하고 그것에 대한 정보가 <code class="highlighter-rouge">user</code>와 <code class="highlighter-rouge">password</code>이다.</li>
+      <li>어떤 데이터베이스를 쓸 것인지에 대한 정보가 <code class="highlighter-rouge">database</code>이다.</li>
+    </ol>
+  </li>
+  <li>
+    <p>연결 객체를 만든 후 <code class="highlighter-rouge">connection.connect()</code>로 데이터베이스에 접속한다.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">connection.end()</code>로 연결을 종료 한다.</p>
+  </li>
+  <li>
+    <p>mySQL GUI 툴에서도 위와 똑같은 과정과 정보가 필요하다.</p>
+  </li>
+  <li>
+    <p>SELECT의 결과는 배열이다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="5-pooling-connections">5. Pooling Connections</h3>
+
+<ol>
+  <li>
+    <p>연결(Connection)을 카페 운영에 비유하면 다음과 같다.</p>
+
+    <ol>
+      <li>손님이 커피를 주문하면, 머그 잔에 커피를 담아서 주게 된다.</li>
+      <li>커피를 2,500원, 머그 잔의 가격을 10,000원이라고 하자. 이때 손님이 커피를 먹고 나서 머그 잔을 깨버리고 간다면 카페 입장에선 손해보는 장사가 된다. 머그 잔을 원래 그대로 돌려 받을 수 있어야 한다.</li>
+      <li>또한 손님이 와서 주문을 할 때마다 머그 잔을 새로 구워야 한다고 가정하면, 이것 또한 상당한 시간을 요구하는 작업이 될 것이다. 따라서 손님이 여러 명 들어올 것을 대비해 머그 잔을 미리 준비를 해놓는다. 그러면 매번 새로 만들어야 하는 시간을 절약할 수 있다. 따라서 100명의 손님이 몰려오더라도 즉시 제공해줄 수 있다.</li>
+      <li>연결(Connection) 역시 절대 싼 자원이 아니다. 부담이 많이 가는 자원이다.</li>
+      <li>Pooling을 하는 것은 머그 잔을 돌려받는 것과 같다. 사용자가 연결을 다 사용하고 나면 반납을 한다.</li>
+      <li>또한 미리 적절한 갯수의 연결 객체를 만들어 놓고 사용자가 들어왔을 때 그 갯수만큼 들어올 수 있도록 하고 나머지는 대기하다가 빠져나가면 들어올 수 있도록 하는데, 이러한 개념을 커넥션 풀(Connection Pool)이라고 한다. 매번 새로 만들지 않기 때문에 생성 비용이 들지 않는다.</li>
+    </ol>
+  </li>
+  <li>
+    <p>Pooling이 없다는 것은 한 번 쓰고 버린다는 뜻이다. 실습할 때는 이렇게 Pooling이 없는 형태로 진행해도 되지만, 실무 환경에서는 Pooling이 필요하다.</p>
+  </li>
+  <li>
+    <p>다음은 Pooling Connection을 사용하는 예제 코드이다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ...</span>
+
+<span class="kd">const</span> <span class="nx">pool</span> <span class="o">=</span> <span class="nx">mysql</span><span class="p">.</span><span class="nx">createPool</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+
+<span class="nx">pool</span><span class="p">.</span><span class="nx">getConnection</span><span class="p">((</span><span class="nx">err</span><span class="p">,</span> <span class="nx">conn</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// console.log('conn', conn);</span>
+  <span class="c1">// if (err) return console.log('err=', err);</span>
+  <span class="c1">// if (err) { console.log('err=', err); return; } </span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'err='</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">conn</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">'SELECT 1 + 1 as solution'</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">rows</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'rows='</span><span class="p">,</span> <span class="nx">rows</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'rows[0]='</span><span class="p">,</span> <span class="nx">a</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"rows[0].solution="</span><span class="p">,</span> <span class="nx">a</span><span class="p">.</span><span class="nx">solution</span><span class="p">);</span>
+    <span class="nx">conn</span><span class="p">.</span><span class="nx">release</span><span class="p">();</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div>    </div>
+
+    <ol>
+      <li><code class="highlighter-rouge">conn.release()</code>는 머그 잔을 사용하고 나서 반납하는 것과 같다. 사용하고 난 후 항상 <code class="highlighter-rouge">release()</code>해야 한다.</li>
+      <li>자바스크립트의 콜백 함수의 대부분은 관행적으로 첫 번째 파라미터로 에러 객체를 전달받는다.</li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="6-로드-밸런싱">6. 로드 밸런싱</h3>
+
+<ol>
+  <li>실제 서비스를 할 때에는 웹 서버를 한 대가 아니라 여러 대를 사용하게 된다. 한 대만 사용할 경우 그 서버가 종료되버리면 큰 일 나지만, 여러 대를 사용하면 그 동안 하던 일을 다른 쪽으로 넘겨줄 수 있는데, 이것을 로드 밸런싱이라고 한다.</li>
+  <li>지금은 컴퓨터 한 대에 모든 것을 설치했지만, 실제로는 로드 밸런싱을 통해 node, express가 설치된 서버를 여러 대 두고 이 서버들이  데이터베이스를 둔 서버를 바라보는 형태로 구성한다. 이때에는 연결 정보를 담고 있는 객체의 host 프로퍼티에 데이터베이스가 설치된 서버의 IP 주소를 적어줘야 한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="7-테이블-생성-member-테이블">7. 테이블 생성 (member 테이블)</h3>
+
+<ol>
+  <li>
+    <p>다음은 member 테이블 생성을 위한 코드이다.</p>
+
+    <pre><code class="language-mysql">CREATE TABLE member(
+	id VARCHAR(20) NOT NULL,
+	name VARCHAR(20) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	tel VARCHAR(13) NOT NULL,
+	PRIMARY KEY(id)
+);
+</code></pre>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="8-데이터베이스-관계의-유형">8. 데이터베이스 관계의 유형</h3>
+
+<h4 id="81-일-대-일-관계">8.1 일 대 일 관계</h4>
+
+<ol>
+  <li>A 테이블은 자주 쓰는 정보, B는 덜 쓰는 정보와 같은 형태로 구성된, 결국은 하나지만 편의 상 2개로 구별해놓은 하나로 합칠 수 있는 관계이다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="82-일-대-다-관계">8.2 일 대 다 관계</h4>
+
+<ol>
+  <li>부서 테이블과 사원 테이블의 관계로 생각할 수 있다. 사원 테이블과 부서 테이블은 사번과 부서 번호라는 각각의 PK를 갖는다. ‘일 대 다’라는 것은 어느 쪽은 하나, 어느 쪽은 많다는 것을 뜻하는데 그것은 한 레코드를 기준으로 한다. 부서 번호가 10번인 레코드는 하나 밖에 없고 그 부서에 속한 사원은 여러 명이다. 따라서 부서 테이블에 있는 부서 번호라는 PK는 사원 테이블에서 여러 번 나타나게 되는데, 이러한 관계가 일 대 다 관계이다.</li>
+  <li>부서 테이블에 있는 부서 번호라는 PK가 사원 테이블에 FK로 가게 되었을 때 그 관계가 일 대 다 관계가 되는 것이다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="83-다-대-다-관계">8.3 다 대 다 관계</h4>
+
+<ol>
+  <li>사실 상 거의 없고 존재하지 않는 관계이다. 그런데도 다 대 다 관계를 이야기하는 이유는 쇼핑몰을 생각해보면 된다. 쇼핑몰의 회원과 상품이 있다고 할 때, 학 회원이 상품 여러 개를 구매할 수 있고 한 상품이 여러 명에게 팔릴 수 있지만 그 관계를 컴퓨터에 하나의 단일 구조로 표현할 수는 없다. 그래서 회원과 상품이 만나서 중간에 파생 테이블이라는 것이 만들어진다. 이 테이블이 구매 테이블이 된다. 구매 테이블은 첫째로 회원 테이블에서 회원 아이디를 가져오고 둘째로 상품 테이블에서 상품 코드를 가져온다. 회원 테이블과 상품 테이블은 모두 구매 테이블에 일 대 다로 붙게 되고, 이것을 ‘다 대 다’ 관계를 해소한다고 한다. ‘다 대 다’ 관계는 현실적으로 있을 수 없는 관계이다. 모든 것을 ‘일 대 다’로 바꿔주는 것이고 이게 핵심이다.</li>
+  <li><a href="https://fmhelp.filemaker.com/help/16/fmp/ko/index.html#page/FMP_Help/many-to-many-relationships.html">다 대 다 관계</a></li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="9-mysql-명령어">9. mySQL 명령어</h3>
+
+<h4 id="91-insert">9.1 INSERT</h4>
+
+<ol>
+  <li>
+    <p>INSERT는 다음과 같이 실행한다.</p>
+
+    <pre><code class="language-mysql">INSERT INTO 테이블명(컬럼명1, 컬럼명2, ...)
+VALUES (값1, 값2, ...);
+</code></pre>
+  </li>
+  <li>
+    <p>실제 사용 예시는 다음과 같다.</p>
+
+    <pre><code class="language-mysql">INSERT INTO member(id, name, email, tel)
+VALUES('hong', '홍길동', 'hong@a.com', '010-1234-5678')l
+</code></pre>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="92-update">9.2 UPDATE</h4>
+
+<ol>
+  <li>
+    <p>UPDATE는 다음과 같이 실행한다.</p>
+
+    <pre><code class="language-mysql">UPDATE 테이블명
+SET 컬럼명1=값1, 컬럼명2=값2, ...
+WHERE 조건;
+</code></pre>
+  </li>
+  <li>
+    <p>실제 사용 예시는 다음과 같다.</p>
+
+    <pre><code class="language-mysql">UPDATE member
+SET name='홍길순', email='sun@abc.com', tel='010-1234-5678'
+WHERE id='hong';
+</code></pre>
+  </li>
+  <li>
+    <p>UPDATE를 수행할 때, WHERE 문을 써서 고치고 싶은 부분을 정확히 지정해주지 않으면 모든 것이 바뀔 수도 있다. 이런 문제를 해결하기 위해 테이블에 유일한 키가 존재해야 한다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="93-delete">9.3 DELETE</h4>
+
+<ol>
+  <li>
+    <p>DELETE는 다음과 같이 실행한다.</p>
+
+    <pre><code class="language-mysql">DELETE FROM 테이블명
+WHERE 조건;
+</code></pre>
+  </li>
+  <li>
+    <p>실제 사용 예시는 다음과 같다.</p>
+
+    <pre><code class="language-mysql">DELETE FROM member
+WHERE id='hong';
+</code></pre>
+  </li>
+  <li>
+    <p>명령어로 대문자를 사용하고 직접 설정한 값을 소문자로 쓰는 것은 반드시 지켜야 하는 것은 아니지만, 가독성을 위해 구분해주는 것이 좋다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="94-select">9.4 SELECT</h4>
+
+<ol>
+  <li>
+    <p>SELECT는 다음과 같이 실행한다.</p>
+
+    <pre><code class="language-mysql">SELECT 컬럼명1, 컬럼명2, ... FROM 테이블명
+</code></pre>
+  </li>
+  <li>
+    <p>실제 사용 예시는 다음과 같다.</p>
+
+    <pre><code class="language-mysql">SELECT * FROM member;
+</code></pre>
+  </li>
+  <li>
+    <p>컬럼명을 지정하지 않고 *를 사용하면 모든 값을 조회할 수 있다. 이때 데이터베이스 내부의 Query Optimizer 엔진이 쿼리를 최적화하고 관리하는 일을 수행하는데, *로 모든 컬럼을 선택하면 어떤 컬럼이 있는지 일일이 검색해가며 찾고 순서를 맞춰야 하기 때문에 속도가 느려지는 문제가 발생한다. 따라서 실제 사용할 때는 컬럼을 정확히 지정해주는 것이 좋다. 직접 지정함으로써 Query Optimizer 입장에서 어떤 컬럼을 출력할 지 바로 확인할 수 있다.</p>
+  </li>
+</ol>
+
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#패스트캠퍼스" class="tag">| 패스트캠퍼스</a>
+            
+            <a href="/tags#til" class="tag">| til</a>
+            
+            <a href="/tags#backend" class="tag">| backend</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=17년 11월 30일 수업 내용 정리&url=http://localhost:4000/learn/til/backend-03/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/learn/til/backend-03/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/learn/til/backend-03/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <section class="author-box">
+  <img src="/assets/img/chayeoi-profile.jpg" alt="Chanyeon Kim" class="author-img">
+  <div class="author-desc">
+    <h2>Chanyeon Kim</h2>
+    <p>자바스크립트를 무척 좋아하는 주니어 프론트엔드 개발자입니다. 현재 React.js, Vue.js, Node.js를 공부 중에 있습니다.</p>
+    <ul>
+      
+        <li class="github"><a href="http://github.com/chayeoi" title="github 저장소" target="_blank"><i class="fa fa-github"></i></a></li>
+      
+      
+        <li class="facebook"><a href="https://facebook.com/chayeoi" title="facebook 링크" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      
+      
+        <li class="instagram"><a href="https://instagram.com/chayeoi" title="instagram 링크" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      
+      <!-- 
+        <li class="email"><a href="mailto:y2oniary@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+       -->
+      <!-- 
+        <li class="phone"><a href="tel:010-2650-5090"><i class="fa fa-phone"></i></a></li>
+       -->
+      
+        <li class="website"><a href="http://chayeoi.creatorlink.net" title="포트폴리오 페이지" target="_blank"><i class="fa fa-globe"></i></a></li>
+      
+      <!-- 
+        <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+       -->
+    </ul>
+  </div>
+</section>
+        <div class="recent-box">
+  <h2 class="recent-title">Recent post</h2>
+  <div class="recent-list">
+    
+      
+        <a href="/learn/til/js-13/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/til/js-12/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/js/this/" class="recent-item" style="background: url(/assets/img/post-js.jpg) center no-repeat; background-size: cover;"><span>this 바인딩 규칙</span></a>
+      
+    
+      
+        <a href="/learn/etc/jekyll/" class="recent-item" style="background: url(/assets/img/post-etc.jpg) center no-repeat; background-size: cover;"><span>Jekyll 블로그 만들기</span></a>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
+
+        <section class="comment-area">
+  <h2 class="comment-heading-invisible">댓글</h2n>
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//y2oniary.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <p>2018 &copy; Chanyeon Kim</p>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

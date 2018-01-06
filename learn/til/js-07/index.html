@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>17년 12월 14일 수업 내용 정리 - Oh My Charlie</title>
+	<meta name="description" content="패스트캠퍼스 프론트엔드 스쿨 수업 내용 정리 (js)">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="flex-container">
+  <header class="main-header">
+  <div class="header-wrapper">
+    <div class="header-flex">
+      <h1 class="logo"><a href="/" title="홈 화면">Oh My Charlie</a></h1>
+      <div class="menu-icon-container">
+        <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </div>
+      <nav class="main-nav">
+        <h2 class="nav-heading-invisible">네비게이션</h2>
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          
+            <li><a href="/" title="Home">Home</a></li>
+          
+            <li><a href="/about" title="About me">About</a></li>
+          
+            <li><a href="/html5" title="HTML5">HTML5</a></li>
+          
+            <li><a href="/css3" title="CSS3">CSS3</a></li>
+          
+            <li><a href="/js" title="Javascript">Javascript</a></li>
+          
+            <li><a href="/til" title="Today I Learned">Today I Learned</a></li>
+           
+        </ul>
+      </nav>
+      <div class="search-icon-container">
+        <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+</header> <!-- End Header -->
+
+  <article class="article-page">
+    <div class="page-image">
+      <div class="cover-image" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">17년 12월 14일 수업 내용 정리</h1>
+          <div class="page-date"><time datetime="2017-12-14 00:00:00 +0900">2017, Dec 14</time></div>
+        </div>
+        <h1 id="today-i-learned">Today I Learned</h1>
+
+<blockquote>
+  <p>패스트캠퍼스 김승하 강사님의 수업 내용 중 정확히 몰랐거나 헷갈렸던  내용을 모두 발췌함.</p>
+</blockquote>
+
+<h2 id="4-day">4 Day</h2>
+
+<h3 id="1-소스맵sourcemap">1. 소스맵(Sourcemap)</h3>
+
+<ol>
+  <li>
+    <p>소스맵을 설정하면 Webpack은 bundle.js에 대한 bundle.js.map 파일을 만들고 bundle.js의 각 라인들이 어떤 파일에서 불러온 것인지 기록한다. 번들러를 거치기 전과 후의 파일이 어떻게 매칭이 되어있는지 기록을 해주는 것이다.</p>
+  </li>
+  <li>
+    <p>webpack/development.js 파일에 다음과 같이 설정하면 소스맵을 만들어준다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">common</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">devtool</span><span class="p">:</span> <span class="s1">'cheap-module-source-map'</span><span class="p">,</span>
+  <span class="na">devServer</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">contentBase</span><span class="p">:</span> <span class="s1">'./dist'</span><span class="p">,</span>
+    <span class="na">hot</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">NamedModulesPlugin</span><span class="p">(),</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">HotModuleReplacementPlugin</span><span class="p">()</span>
+  <span class="p">]</span>
+<span class="p">});</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="2-번들러의-세대-교체">2. 번들러의 세대 교체</h3>
+
+<ol>
+  <li>기존의 Webpack은 약간 느리다는 단점이 있어서 차세대 번들러들이 등장했다.</li>
+  <li>대표적으로 Rollup, Fusebox, Brunch 등이 있다.</li>
+  <li>최근 Parcel이란 이름의 번들러가 등장했는데 굉장히 혁신적이다. 기존의 Webpack에서 번들링 속도를 느리게 하던 요소들을 제거했다. 그러나 아직 Sourcemap과 같은 기능이 없어서 실무에서 사용할 순 없는 상태이다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="3-lf와-crlf">3. LF와 CRLF</h3>
+
+<ol>
+  <li>LF는 현재 커서의 위치에서 아래쪽으로 줄만 바꾸는 것이고 CR은 현재 커서의 위치를 현재 행의 맨 앞으로 이동시키는 것을 의미한다.</li>
+  <li>리눅스와 맥은 줄바꿈 문자로 LF를 사용하고, 윈도는 CR과 LF를 모두 사용한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="4-editorconfig">4. .editorconfig</h3>
+
+<ol>
+  <li>
+    <p>서로 다른 개발 환경에서 작업하는 개발자들이 서로 다른 옵션을 사용하게 되면 혼란을 겪게 되는데, 이러한 규칙을 미리 지키도록 강제해놓은 파일이 바로 .editorconfig이다.</p>
+  </li>
+  <li>
+    <p>vscode에는 .editorconfig가 내장되어있지 않아서 Extension으로 추가적으로 설치해줘야 한다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">root</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="p">[</span><span class="o">*</span><span class="p">]</span>
+<span class="nx">charset</span> <span class="o">=</span> <span class="nx">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="nx">indent_style</span> <span class="o">=</span> <span class="nx">space</span>
+<span class="nx">indent_size</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nx">trim_trailing_whitespace</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="nx">insert_final_newline</span> <span class="o">=</span> <span class="kc">true</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="5-prototype">5. Prototype</h3>
+
+<ol>
+  <li>어떤 객체의 프로토타입에 메소드를 정의하기 위해 메소드를 정의한 객체를 통째로 프로토타입에 할당할 수 있지만, 이렇게 하게 되면 프로토타입 객체가 기본적으로 가지고 있던 constructor를 잃게 되므로 좋지 않은 방식이다.</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="6-vscode-설정">6. VSCode 설정</h3>
+
+<h4 id="61-환경-설정">6.1 환경 설정</h4>
+
+<ol>
+  <li>환경 설정 열기: <code class="highlighter-rouge">CMD</code> + <code class="highlighter-rouge">,</code>
+    <ol>
+      <li>좌측은 기본 설정, 우측은 기본 설정을 참고하여 수정할 내용을 써넣는다.</li>
+      <li>editor.renderWhitespace 속성으로 공백 문자를 렌더링하는 방법을 제어할 수 있다. boundary는 글자와 글자 사이의 점을 제외한 공백에 점을 표시하고, all은 글자와 글자 사이의 점까지 표시한다. 공백을 깔끔하게 관리할 필요가 있으므로 설정하는 것을 추천한다.</li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="62-debugger-for-chrome">6.2 Debugger for Chrome</h4>
+
+<ol>
+  <li>
+    <p>Debugger를 활용하여 버그를 쉽게 캐치할 수 있다.</p>
+
+    <ol>
+      <li>Debugger for Chrome 익스텐션을 설치한다.</li>
+      <li><code class="highlighter-rouge">CMD</code> + <code class="highlighter-rouge">Shift</code> + <code class="highlighter-rouge">P</code>를 눌러 명령어 입력창을 실행한 후, launch를 검색한다.</li>
+      <li>검색 목록에서 chrome을 선택하면 .vscode 폴더 안에 launch.json 파일이 생성된다.</li>
+    </ol>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="c1">// IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.</span>
+  <span class="c1">// 기존 특성에 대한 설명을 보려면 가리킵니다.</span>
+  <span class="c1">// 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.</span>
+  <span class="s2">"version"</span><span class="p">:</span> <span class="s2">"0.2.0"</span><span class="p">,</span>
+  <span class="s2">"configurations"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"chrome"</span><span class="p">,</span>
+      <span class="s2">"request"</span><span class="p">:</span> <span class="s2">"launch"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Launch Chrome against localhost"</span><span class="p">,</span>
+      <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://localhost:8080"</span><span class="p">,</span>
+      <span class="s2">"webRoot"</span><span class="p">:</span> <span class="s2">"${workspaceRoot}"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>이후 다음 순서를 따라 Debugger를 실행할 수 있다.</p>
+
+    <ol>
+      <li>좌측의 bug 버튼을 클릭하여 재생 버튼을 클릭하면 Debugger for Chrome이 실행된다.</li>
+      <li>일반 브라우저에 찍혀야 할 로그가 에디터 콘솔에 표시되는 것을 확인할 수 있다.</li>
+      <li>코드의 좌측을 클릭하여 점을 고정시키면 중단점을 설정할 수 있다. 코드가 실행될 때 해당 부분이 실행되는 시점에 멈추라는 의미이다. 따라서 해당 시점에 코드 내부를 들여다볼 수 있게 된다. 재생 버튼을 한 번 더 클릭하여 재개할 수 있다.</li>
+      <li>디버거를 사용하지 않는다면 <code class="highlighter-rouge">console.log()</code>를 사용해서 일일이 확인해봐야하지만,  Debugger를 사용하면 <code class="highlighter-rouge">console.log()</code>를 하나도 사용하지 않고 코드 내부에서 무슨일이 일어나는지 들여다볼 수 있다.</li>
+      <li>재생 버튼의 우측에 위치한 버튼을 누르면 코드의 실행 흐름을 따라 한 줄씩 실행하므로 코드의 실행 흐름을 직접 확인할 수 있다.</li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="63-multiple-cursor">6.3 Multiple Cursor</h4>
+
+<ol>
+  <li>같은 단어를 순차적으로 여러 개 선택하기: <code class="highlighter-rouge">CMD</code> + <code class="highlighter-rouge">D</code></li>
+  <li>다중 커서 지정하기: <code class="highlighter-rouge">CMD</code> + <code class="highlighter-rouge">Option</code> + <code class="highlighter-rouge">↑</code>, <code class="highlighter-rouge">↓</code> 또는 <code class="highlighter-rouge">CMD</code> 키를 누른 채로 커서를 위치시킬 부분을 클릭한다.</li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="64-git">6.4 git</h4>
+
+<ol>
+  <li>
+    <p>VSCode에 git 관련 기능이 내장되어 있다.</p>
+  </li>
+  <li>
+    <p>git 버튼 클릭 후 Message에 commit 메세지 입력 후 체크 버튼을 클릭하면 add와 commit이 자동으로 처리된다.</p>
+
+    <p>하단의 변경 내용 동기화 버튼으로 push를 처리할 수 있다.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h4 id="65-라인-추가">6.5 라인 추가</h4>
+
+<ol>
+  <li>커서의 위치에 상관없이 아랫쪽에 한 줄 추가: <code class="highlighter-rouge">CMD</code> + <code class="highlighter-rouge">Return</code></li>
+  <li>커서의 위치에 상관없이 윗쪽에 한 줄 추가: <code class="highlighter-rouge">CMD</code> + <code class="highlighter-rouge">Shift</code> + <code class="highlighter-rouge">Return</code></li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="7-predicate">7. Predicate</h3>
+
+<ol>
+  <li>진리값을 반환하는 함수를 Predicate라고 한다.</li>
+</ol>
+
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#패스트캠퍼스" class="tag">| 패스트캠퍼스</a>
+            
+            <a href="/tags#til" class="tag">| til</a>
+            
+            <a href="/tags#js" class="tag">| js</a>
+            
+            <a href="/tags#javascript" class="tag">| javascript</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=17년 12월 14일 수업 내용 정리&url=http://localhost:4000/learn/til/js-07/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/learn/til/js-07/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/learn/til/js-07/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <section class="author-box">
+  <img src="/assets/img/chayeoi-profile.jpg" alt="Chanyeon Kim" class="author-img">
+  <div class="author-desc">
+    <h2>Chanyeon Kim</h2>
+    <p>자바스크립트를 무척 좋아하는 주니어 프론트엔드 개발자입니다. 현재 React.js, Vue.js, Node.js를 공부 중에 있습니다.</p>
+    <ul>
+      
+        <li class="github"><a href="http://github.com/chayeoi" title="github 저장소" target="_blank"><i class="fa fa-github"></i></a></li>
+      
+      
+        <li class="facebook"><a href="https://facebook.com/chayeoi" title="facebook 링크" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      
+      
+        <li class="instagram"><a href="https://instagram.com/chayeoi" title="instagram 링크" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      
+      <!-- 
+        <li class="email"><a href="mailto:y2oniary@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+       -->
+      <!-- 
+        <li class="phone"><a href="tel:010-2650-5090"><i class="fa fa-phone"></i></a></li>
+       -->
+      
+        <li class="website"><a href="http://chayeoi.creatorlink.net" title="포트폴리오 페이지" target="_blank"><i class="fa fa-globe"></i></a></li>
+      
+      <!-- 
+        <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+       -->
+    </ul>
+  </div>
+</section>
+        <div class="recent-box">
+  <h2 class="recent-title">Recent post</h2>
+  <div class="recent-list">
+    
+      
+        <a href="/learn/til/js-13/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/til/js-12/" class="recent-item" style="background: url(/assets/img/post-til.jpg) center no-repeat; background-size: cover;"><span>17년 12월 21일 수업 내용 정리</span></a>
+      
+    
+      
+        <a href="/learn/js/this/" class="recent-item" style="background: url(/assets/img/post-js.jpg) center no-repeat; background-size: cover;"><span>this 바인딩 규칙</span></a>
+      
+    
+      
+        <a href="/learn/etc/jekyll/" class="recent-item" style="background: url(/assets/img/post-etc.jpg) center no-repeat; background-size: cover;"><span>Jekyll 블로그 만들기</span></a>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
+
+        <section class="comment-area">
+  <h2 class="comment-heading-invisible">댓글</h2n>
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//y2oniary.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <p>2018 &copy; Chanyeon Kim</p>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
