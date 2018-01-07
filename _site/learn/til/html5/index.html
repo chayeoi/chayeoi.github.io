@@ -334,12 +334,12 @@
 
 <span class="c">&lt;!-- datalist를 input의 리스트로 연결. autofocus를 설정하면 로딩되었을 때 자동 초점이 맞춰진다. --&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">autofocus</span> <span class="na">list=</span><span class="s">"search-suggestions"</span><span class="nt">/&gt;</span> 
-	<span class="nt">&lt;datalist</span> <span class="na">id=</span><span class="s">"search-suggestions"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"DM"</span> <span class="na">value=</span><span class="s">"Depeche Mode"</span><span class="nt">&gt;</span>
-      	<span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"Moz"</span> <span class="na">value=</span><span class="s">"Morrissey"</span><span class="nt">&gt;</span>
-      	<span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"NO"</span> <span class="na">value=</span><span class="s">"New Order"</span><span class="nt">&gt;</span>
-      	<span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"TC"</span> <span class="na">value=</span><span class="s">"The Cure"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;/datalist&gt;</span>
+<span class="nt">&lt;datalist</span> <span class="na">id=</span><span class="s">"search-suggestions"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"DM"</span> <span class="na">value=</span><span class="s">"Depeche Mode"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"Moz"</span> <span class="na">value=</span><span class="s">"Morrissey"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"NO"</span> <span class="na">value=</span><span class="s">"New Order"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">label=</span><span class="s">"TC"</span> <span class="na">value=</span><span class="s">"The Cure"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/datalist&gt;</span>
 
 <span class="c">&lt;!-- tel 타입을 설정하면 모바일에서 키보드 포커싱을 받았을 때 숫자 키보드가 올라오도록 할 수 있다. pattern 어트리뷰트에 정규표현식을 설정. name은 값을 담는 변수와 비슷하다. --&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">pattern=</span><span class="s">"[0-9]{10}"</span> <span class="na">name=</span><span class="s">"tel"</span> <span class="na">title=</span><span class="s">"Phone Number?!?!"</span><span class="nt">/&gt;</span>
@@ -429,15 +429,12 @@
   <li>웹 어플리케이션에 접근성을 개선하거나 보장할 수 있는 스펙</li>
   <li>기존 스펙과 중복되는 상황에서는 ARIA 대신 기존 스펙을 따르는 것이 좋다.</li>
   <li>이미 heading으로 명시한 상황에서 title로 중복된 내용을 명시해야 하는 상황이라면 <code class="highlighter-rouge">aria-labelledby</code>를 사용하는 것이 좋다.</li>
-  <li><code class="highlighter-rouge">aria-labelledby</code>와 <code class="highlighter-rouge">aria-describedby</code></li>
-</ol>
-
-<ul>
-  <li><code class="highlighter-rouge">aria-labelledby</code>: 명시적으로 딱 떨어지는 단어</li>
-  <li><code class="highlighter-rouge">aria-describedby</code>: 문장 단위를 명시할 때</li>
-</ul>
-
-<ol>
+  <li><code class="highlighter-rouge">aria-labelledby</code>와 <code class="highlighter-rouge">aria-describedby</code>`
+    <ol>
+      <li>``aria-labelledby`: 명시적으로 딱 떨어지는 단어</li>
+      <li><code class="highlighter-rouge">aria-describedby</code>: 문장 단위를 명시할 때</li>
+    </ol>
+  </li>
   <li><code class="highlighter-rouge">aria-hidden</code>: 읽지 않아도 되는 정보 처리</li>
   <li><a href="https://github.com/niawa">정보화 지능원 github 계정</a></li>
   <li><a href="www.wah.or.kr">웹 접근성 연구소</a></li>

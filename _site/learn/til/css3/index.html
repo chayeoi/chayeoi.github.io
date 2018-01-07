@@ -98,15 +98,12 @@
 <h3 id="1-overflow-hidden">1. overflow: hidden</h3>
 
 <ol>
-  <li><code class="highlighter-rouge">overflow: hidden</code>은 <code class="highlighter-rouge">overflow: visible</code>일때는 인식하지 못 했던 몇 가지를 인식하게 한다.</li>
-</ol>
-
-<ul>
-  <li><strong>float</strong> 처리된 요소</li>
-  <li>자식 요소의 <strong>margin 값</strong></li>
-</ul>
-
-<ol>
+  <li><code class="highlighter-rouge">overflow: hidden</code>은 <code class="highlighter-rouge">overflow: visible</code>일때는 인식하지 못 했던 몇 가지를 인식하게 한다.
+    <ol>
+      <li><strong>float</strong> 처리된 요소</li>
+      <li>자식 요소의 <strong>margin 값</strong></li>
+    </ol>
+  </li>
   <li>만약 <code class="highlighter-rouge">overflow</code> 프로퍼티의 값이 <code class="highlighter-rouge">visible</code>이고 내부 여백(padding)과 테두리(border)가 없는 상태에서 자식 요소가 ‘margin-top’을 가지고 있을 경우, 마치 요소 자신의 ‘margin-top’처럼 보여진다. 하지만, <code class="highlighter-rouge">hidden</code>인 상태에서는 그 ‘margin-top’이 자신의 요소 안에서 이뤄진다. 물론 부모 요소가 해당 margin이나 border를 가지고 있다면 <code class="highlighter-rouge">hidden</code>처럼 인식할 수 있다.</li>
   <li><code class="highlighter-rouge">overflow: hidden;</code>을 적용하면 content가 border 이외로 흘러넘치는 영역을 숨길 뿐, padding 영역에서는 content를 숨기지 않고 그대로 표시한다.</li>
   <li>넘치는 영역을 계산하는 방식으로 자식 요소의 사이즈를 체크하여 영역을 잡는다.</li>
@@ -118,11 +115,6 @@
   <h4 id="box-model">Box Model</h4>
 
   <ol>
-    <li>
-      <p>부모 요소 내에 위치한 자식 요소에 margin을 설정하면 그 margin은 부모 요소 내의 Content Box를 기준으로 설정되는지?</p>
-
-      <p>→ Me: 해보니깐 그런 것 같음. <code class="highlighter-rouge">overflow: hidden</code>일 때 자식 요소의 margin을 인식한다는 글을 보니깐 아닌 것 같기도 하고?</p>
-    </li>
     <li>
       <p><code class="highlighter-rouge">overflow: visible</code>일 때 자식 요소의 margin을 마치 자신의 margin처럼 인식한다는데, 그렇게 되면 해당 요소의 margin은 자신과 자식 요소의 margin 중 어떤 것이 적용되는 것인지?</p>
 
@@ -343,21 +335,18 @@
 <h3 id="3-색상-조정">3. 색상 조정</h3>
 
 <ol>
-  <li>rgb 16진수 방식</li>
+  <li>rgb 16진수 방식
+    <ol>
+      <li>앞에서부터 두 자리씩 Red, Green, Blue 색상을 나타낸다.</li>
+      <li>색상별로 같은 값이 반복될 때, short-hand로 세 자리로 축약하여 나타낼 수 있다. (#AA55BB → #A5B)</li>
+    </ol>
+  </li>
+  <li>rgb 10진수 방식
+    <ol>
+      <li>앞에서부터 Red, Green, Blue, 불투명도를 나타낸다. (rgba(255, 0, 0,  0.5))</li>
+    </ol>
+  </li>
 </ol>
-
-<ul>
-  <li>앞에서부터 두 자리씩 Red, Green, Blue 색상을 나타낸다.</li>
-  <li>색상별로 같은 값이 반복될 때, short-hand로 세 자리로 축약하여 나타낼 수 있다. (#AA55BB → #A5B)</li>
-</ul>
-
-<ol>
-  <li>rgb 10진수 방식</li>
-</ol>
-
-<ul>
-  <li>앞에서부터 Red, Green, Blue, 불투명도를 나타낸다. (rgba(255, 0, 0,  0.5))</li>
-</ul>
 
 <p><br /></p>
 
@@ -366,28 +355,25 @@
 <ol>
   <li>높이를 나타내는 단위로 px, %, em 이외에 vh를 사용할 수 있다.</li>
   <li>1vh는 디바이스 화면 높이의  1 / 100의 크기를 의미한다.</li>
-  <li>vh와 % 모두 상대 크기를 나타내는 단위지만 차이점이 있다.</li>
+  <li>vh와 % 모두 상대 크기를 나타내는 단위지만 차이점이 있다.
+    <ol>
+      <li>vh: 디바이스 화면 높이를 기준으로 상대적 크기를 정한다.</li>
+      <li>%: 해당 요소가 속한 부모 요소의 content 영역의 높이를 기준으로 상대적 크기를 정한다.</li>
+    </ol>
+  </li>
 </ol>
-
-<ul>
-  <li>vh: 디바이스 화면 높이를 기준으로 상대적 크기를 정한다.</li>
-  <li>%: 해당 요소가 속한 부모 요소의 content 영역의 높이를 기준으로 상대적 크기를 정한다.</li>
-</ul>
 
 <p><br /></p>
 
 <h3 id="5-selector">5. Selector</h3>
 
 <ol>
-  <li>그룹 선택자</li>
-</ol>
-
-<ul>
-  <li>그룹 선택자(,)를 이용하면 공통된 성질을 한 번에 선언할 수 있다.</li>
-  <li>모든 스타일에 대해 공통으로 적용할 수 있으므로 유지보수하기 편리하다.</li>
-</ul>
-
-<ol>
+  <li>그룹 선택자
+    <ol>
+      <li>그룹 선택자(,)를 이용하면 공통된 성질을 한 번에 선언할 수 있다.</li>
+      <li>모든 스타일에 대해 공통으로 적용할 수 있으므로 유지보수하기 편리하다.</li>
+    </ol>
+  </li>
   <li>같은 <code class="highlighter-rouge">header</code>라도 본문과 섹션에서 사용되는 <code class="highlighter-rouge">header</code>는 서로 다르므로 서로 다른 클래스명으로 스타일을 지정한다.</li>
   <li>id 셀렉터는 최대한 사용을 자제하려는 것이 요즘 추세이다.</li>
   <li>id 셀렉터는 스크립트 핸들링이 필요할 때 자주 쓰인다.</li>
@@ -403,25 +389,19 @@
   <li>수평 정렬: <code class="highlighter-rouge">position: relative</code> 설정 후 <code class="highlighter-rouge">left: 50%</code>와 <code class="highlighter-rouge">transform: translateX(-50%)</code>를 적용</li>
   <li>수직 정렬: <code class="highlighter-rouge">position: relative</code> 설정 후 <code class="highlighter-rouge">top: 50%</code>와 <code class="highlighter-rouge">transform: translateY(-50%)</code>를 적용</li>
   <li><code class="highlighter-rouge">position: relative</code> 설정 후 <code class="highlighter-rouge">left: 50%</code>, <code class="highlighter-rouge">right: 50%</code>와 <code class="highlighter-rouge">transform: translate(-50%, -50%)</code>를 지정하면 수평 정렬과 수직 정렬을 한 번에 할 수 있다.</li>
-  <li><code class="highlighter-rouge">line-height</code>를 이용하여 수직 정렬을 할 수 있다.</li>
-</ol>
-
-<ul>
-  <li>line-height에서 font-size를 제외한 나머지를 이등분해서 상하 여백을 설정한다.</li>
-  <li>그러나 글꼴에 따라 정확히 가운데 정렬이 되지 않을 수도 있다.</li>
-</ul>
-
-<ol>
+  <li><code class="highlighter-rouge">line-height</code>를 이용하여 수직 정렬을 할 수 있다.
+    <ol>
+      <li>line-height에서 font-size를 제외한 나머지를 이등분해서 상하 여백을 설정한다.</li>
+      <li>그러나 글꼴에 따라 정확히 가운데 정렬이 되지 않을 수도 있다.</li>
+    </ol>
+  </li>
   <li><code class="highlighter-rouge">flex-box</code>의 <code class="highlighter-rouge">align-items: center</code>를 이용하여 정렬할 수도 있다.</li>
-  <li>수직 정렬하는 방법</li>
-</ol>
-
-<ul>
-  <li>위 아래 패딩 설정</li>
-  <li><code class="highlighter-rouge">height</code> 프로퍼티와 <code class="highlighter-rouge">line-height</code> 프로퍼티의 값을 같은 값으로 설정한다.</li>
-</ul>
-
-<ol>
+  <li>수직 정렬하는 방법
+    <ol>
+      <li>위 아래 패딩 설정</li>
+      <li><code class="highlighter-rouge">height</code> 프로퍼티와 <code class="highlighter-rouge">line-height</code> 프로퍼티의 값을 같은 값으로 설정한다.</li>
+    </ol>
+  </li>
   <li><code class="highlighter-rouge">text-align: center</code>는 해당 요소가 block 요소일 때 사용 가능하다. 요소 내부의 inline 요소를 가운데 정렬시킨다.</li>
 </ol>
 
