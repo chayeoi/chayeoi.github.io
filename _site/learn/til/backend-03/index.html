@@ -253,14 +253,14 @@
   <li>
     <p>다음은 member 테이블 생성을 위한 코드이다.</p>
 
-    <pre><code class="language-mysql">CREATE TABLE member(
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE member(
 	id VARCHAR(20) NOT NULL,
 	name VARCHAR(20) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	tel VARCHAR(13) NOT NULL,
 	PRIMARY KEY(id)
 );
-</code></pre>
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -302,16 +302,16 @@
   <li>
     <p>INSERT는 다음과 같이 실행한다.</p>
 
-    <pre><code class="language-mysql">INSERT INTO 테이블명(컬럼명1, 컬럼명2, ...)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO 테이블명(컬럼명1, 컬럼명2, ...)
 VALUES (값1, 값2, ...);
-</code></pre>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>실제 사용 예시는 다음과 같다.</p>
 
-    <pre><code class="language-mysql">INSERT INTO member(id, name, email, tel)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO member(id, name, email, tel)
 VALUES('hong', '홍길동', 'hong@a.com', '010-1234-5678')l
-</code></pre>
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -323,18 +323,18 @@ VALUES('hong', '홍길동', 'hong@a.com', '010-1234-5678')l
   <li>
     <p>UPDATE는 다음과 같이 실행한다.</p>
 
-    <pre><code class="language-mysql">UPDATE 테이블명
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE 테이블명
 SET 컬럼명1=값1, 컬럼명2=값2, ...
 WHERE 조건;
-</code></pre>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>실제 사용 예시는 다음과 같다.</p>
 
-    <pre><code class="language-mysql">UPDATE member
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE member
 SET name='홍길순', email='sun@abc.com', tel='010-1234-5678'
 WHERE id='hong';
-</code></pre>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>UPDATE를 수행할 때, WHERE 문을 써서 고치고 싶은 부분을 정확히 지정해주지 않으면 모든 것이 바뀔 수도 있다. 이런 문제를 해결하기 위해 테이블에 유일한 키가 존재해야 한다.</p>
@@ -349,16 +349,16 @@ WHERE id='hong';
   <li>
     <p>DELETE는 다음과 같이 실행한다.</p>
 
-    <pre><code class="language-mysql">DELETE FROM 테이블명
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE FROM 테이블명
 WHERE 조건;
-</code></pre>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>실제 사용 예시는 다음과 같다.</p>
 
-    <pre><code class="language-mysql">DELETE FROM member
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE FROM member
 WHERE id='hong';
-</code></pre>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>명령어로 대문자를 사용하고 직접 설정한 값을 소문자로 쓰는 것은 반드시 지켜야 하는 것은 아니지만, 가독성을 위해 구분해주는 것이 좋다.</p>
@@ -373,14 +373,14 @@ WHERE id='hong';
   <li>
     <p>SELECT는 다음과 같이 실행한다.</p>
 
-    <pre><code class="language-mysql">SELECT 컬럼명1, 컬럼명2, ... FROM 테이블명
-</code></pre>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼명1, 컬럼명2, ... FROM 테이블명
+</code></pre></div>    </div>
   </li>
   <li>
     <p>실제 사용 예시는 다음과 같다.</p>
 
-    <pre><code class="language-mysql">SELECT * FROM member;
-</code></pre>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM member;
+</code></pre></div>    </div>
   </li>
   <li>
     <p>컬럼명을 지정하지 않고 *를 사용하면 모든 값을 조회할 수 있다. 이때 데이터베이스 내부의 Query Optimizer 엔진이 쿼리를 최적화하고 관리하는 일을 수행하는데, *로 모든 컬럼을 선택하면 어떤 컬럼이 있는지 일일이 검색해가며 찾고 순서를 맞춰야 하기 때문에 속도가 느려지는 문제가 발생한다. 따라서 실제 사용할 때는 컬럼을 정확히 지정해주는 것이 좋다. 직접 지정함으로써 Query Optimizer 입장에서 어떤 컬럼을 출력할 지 바로 확인할 수 있다.</p>

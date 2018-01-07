@@ -105,7 +105,7 @@
   <span class="na">connectionLimit</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="c1">// 동시에 몇 명까지 받을 것인지 설정</span>
   <span class="na">host</span><span class="p">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
   <span class="na">user</span><span class="p">:</span> <span class="s2">"root"</span><span class="p">,</span>
-  <span class="na">password</span><span class="p">:</span> <span class="s2">"H@pp2n!ng!"</span><span class="p">,</span>
+  <span class="na">password</span><span class="p">:</span> <span class="s2">"password"</span><span class="p">,</span>
   <span class="na">database</span><span class="p">:</span> <span class="s2">"test"</span>
 <span class="p">};</span>
 </code></pre></div>    </div>
@@ -186,8 +186,8 @@
   <li>
     <p>mySQL에서는 ORDER BY로 데이터 정렬 순서를 지정할 수 있다. <code class="highlighter-rouge">DESC</code>는 descending의 약어로, 역 순으로 정렬한다.</p>
 
-    <pre><code class="language-mysql">SELECT * FROM board ORDER BY num DESC
-</code></pre>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM board ORDER BY num DESC
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -210,8 +210,8 @@
   <li>
     <p>데이터베이스에서 <code class="highlighter-rouge">DATE_FORMAT</code>을 이용하여 날짜 형식을 포맷할 수 있다.</p>
 
-    <pre><code class="language-mysql">DATE_FORMAT(regdate, '%Y-%c-%d%T')
-</code></pre>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DATE_FORMAT(regdate, '%Y-%c-%d-%T')
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -425,8 +425,8 @@ git push origin master
   <li>
     <p>hidden 타입으로 처리하는 한이 있더라도 글 번호를 다음 화면으로 넘겨야 한다. 해당 글 번호(PK)를 찾아 DB를 수정해야 하기 때문이다. hidden 처리한 요소는 화면에 보이진 않지만 소스 보기에서 확인할 수 있다. 따라서 중요한 정보는 hidden 처리로 담으면 안 된다.</p>
 
-    <pre><code class="language-ejs">&lt;input type="hidden" name="num" value="&lt;%=row.num%&gt;"&gt;
-</code></pre>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="hidden" name="num" value="&lt;%=row.num%&gt;"&gt;
+</code></pre></div>    </div>
   </li>
   <li>
     <p>‘/update’에 대한 라우팅 처리는 다음과 같다.</p>

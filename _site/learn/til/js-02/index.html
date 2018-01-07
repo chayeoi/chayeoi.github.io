@@ -94,7 +94,7 @@
           <h1 id="today-i-learned">Today I Learned</h1>
 
 <blockquote>
-  <p>패스트캠퍼스 김승하 강사님의 수업 내용 중 정확히 몰랐거나 헷갈렸던  내용을 모두 발췌함.</p>
+  <p>패스트캠퍼스 김승하 강사님의 수업 교재 내용 중 새로 알게 됐거나 조금이라도 헷갈릴 수 있는 내용들을 모두 정리했습니다.</p>
 </blockquote>
 
 <h2 id="2-day">2 Day</h2>
@@ -230,12 +230,12 @@
   <li>
     <p>일반적인 경우에는 보통 <code class="highlighter-rouge">===</code>를 사용하는데, null check를 할 때 만큼은 <code class="highlighter-rouge">==</code>를 자주 사용한다.</p>
 
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 아래 세 개의 식은 완전히 같은 의미입니다.</span>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 아래 세 개의 식은 완전히 같은 의미이다.</span>
 <span class="nx">input</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">input</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
 <span class="nx">input</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">;</span>
 <span class="nx">input</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">;</span>
 
-<span class="c1">// 아래 세 개의 식은 완전히 같은 의미입니다.</span>
+<span class="c1">// 아래 세 개의 식은 완전히 같은 의미이다.</span>
 <span class="nx">input</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">input</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">;</span>
 <span class="nx">input</span> <span class="o">==</span> <span class="kc">null</span><span class="p">;</span>
 <span class="nx">input</span> <span class="o">==</span> <span class="kc">undefined</span><span class="p">;</span>
@@ -265,7 +265,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>매개변수(Parameter) : <code class="highlighter-rouge">x, y</code>처럼 함수 안에 사용하는 변수, 함수 호출이 될때 선언된다.</p>
+    <p>매개변수(Parameter): <code class="highlighter-rouge">x, y</code>처럼 함수 안에 사용하는 변수, 함수 호출이 될때 선언된다.</p>
   </li>
   <li>
     <p>반환값: return 뒤에 오는 값을 말한다.</p>
@@ -456,7 +456,7 @@
 <h5 id="421-while">4.2.1 while</h5>
 
 <ol>
-  <li>특정 조건을 만족하는 한 코드를 반복해서 실행시킵니다.</li>
+  <li>특정 조건을 만족하는 한 코드를 반복해서 실행시킨다.</li>
 </ol>
 
 <p><br /></p>
@@ -644,7 +644,7 @@
 
 <ol>
   <li>
-    <p>ES2015에 도입된 <code class="highlighter-rouge">for...of</code> 구문은, 역시 ES2015에 도입된 <strong>iterable</strong>을 순회하기 위해 사용할 수 있다.</p>
+    <p>ES2015에 도입된 <code class="highlighter-rouge">for...of</code> 구문은 <strong>iterable</strong>을 순회하기 위해 사용할 수 있다.</p>
 
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">){</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
@@ -671,7 +671,7 @@
 
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
 
-<span class="c1">// `arr`의 각 요소를 제곱한 값으로 새 배열을 만듭니다.</span>
+<span class="c1">// 'arr'의 각 요소를 제곱한 값으로 새 배열을 만든다.</span>
 <span class="kd">const</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span> <span class="o">**</span> <span class="mi">2</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArr</span><span class="p">);</span> <span class="c1">// [1, 4, 9, 16, 25]</span>
 </code></pre></div>    </div>

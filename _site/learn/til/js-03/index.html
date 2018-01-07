@@ -94,12 +94,12 @@
           <h1 id="today-i-learned">Today I Learned</h1>
 
 <blockquote>
-  <p>패스트캠퍼스 김승하 강사님의 수업 내용 중 정확히 몰랐거나 헷갈렸던  내용을 모두 발췌함.</p>
+  <p>패스트캠퍼스 김승하 강사님의 수업 교재 내용 중 새로 알게 됐거나 조금이라도 헷갈릴 수 있는 내용들을 모두 정리했습니다.</p>
 </blockquote>
 
 <h2 id="4-day">4 Day</h2>
 
-<h3 id="1-arayfromhello">1. Aray.from(‘hello’)</h3>
+<h3 id="1-arrayfromhello">1. Array.from(‘hello’)</h3>
 
 <ol>
   <li>
@@ -158,11 +158,11 @@
 
 <span class="kd">const</span> <span class="nx">child</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">parent</span><span class="p">);</span>
 
-<span class="c1">// 프로토타입 객체의 속성을 간접적으로 삭제하는 것은 불가능합니다.</span>
+<span class="c1">// 프로토타입 객체의 속성을 간접적으로 삭제하는 것은 불가능하다.</span>
 <span class="k">delete</span> <span class="nx">child</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span>
 <span class="nx">parent</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span> <span class="c1">// '😝'</span>
 
-<span class="c1">// 프로토타입 객체의 속성을 간접적으로 변경하는 것은 불가능합니다.</span>
+<span class="c1">// 프로토타입 객체의 속성을 간접적으로 변경하는 것은 불가능하다.</span>
 <span class="nx">child</span><span class="p">.</span><span class="nx">prop</span> <span class="o">=</span> <span class="s1">'💀'</span><span class="p">;</span>
 <span class="nx">parent</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span> <span class="c1">// '😝'</span>
 <span class="nx">child</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span> <span class="c1">// '</span>
@@ -195,7 +195,7 @@
 
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">new</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// `new` 없이 호출되면, 직접 객체를 생성해 반환합니다.</span>
+    <span class="c1">// `new` 없이 호출되면, 직접 객체를 생성해 반환한다.</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
@@ -211,9 +211,9 @@
 
 <ol>
   <li>
-    <p>JavaScript의 함수는 객체이기도 하다는 사실을 앞에서 언급했습니다. 생성자의 속성에 직접 지정된 메소드를 가지고 정적 메소드(static method)라고 한다. 우리가 이제까지 유용하게 사용했던 <code class="highlighter-rouge">Number.isNaN</code>, <code class="highlighter-rouge">Object.getPropertyOf</code> 등의 함수들은 모두 정적 메소드이다. 정적 메소드는 특정 인스턴스에 대한 작업이 아니라, 해당 생성자와 관련된 일반적인 작업을 정의하고 싶을 때 사용된다.</p>
+    <p>JavaScript의 함수는 객체이기도 하다는 사실을 앞에서 언급했다. 생성자의 속성에 직접 지정된 메소드를 가지고 정적 메소드(static method)라고 한다. 우리가 이제까지 유용하게 사용했던 <code class="highlighter-rouge">Number.isNaN</code>, <code class="highlighter-rouge">Object.getPropertyOf</code> 등의 함수들은 모두 정적 메소드이다. 정적 메소드는 특정 인스턴스에 대한 작업이 아니라, 해당 생성자와 관련된 일반적인 작업을 정의하고 싶을 때 사용된다.</p>
 
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 생성자의 속성에 함수를 직접 할당합니다.</span>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 생성자의 속성에 함수를 직접 할당한다.</span>
 <span class="nx">Person</span><span class="p">.</span><span class="nx">compareAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">person1</span><span class="p">,</span> <span class="nx">person2</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">person1</span><span class="p">.</span><span class="nx">age</span> <span class="o">&lt;</span> <span class="nx">person2</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s1">'첫 번째 사람의 나이가 더 많습니다.'</span><span class="p">;</span>
