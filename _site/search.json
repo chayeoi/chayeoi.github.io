@@ -17,35 +17,11 @@
     } ,
   
     {
-      "title"    : "this 바인딩 규칙",
-      "category" : "js",
-      "tags"     : "js, javascript, this",
-      "url"      : "/learn/js/this/",
-      "date"     : "2018-01-01 00:00:00 +0900"
-    } ,
-  
-    {
-      "title"    : "Jekyll 블로그 만들기",
-      "category" : "etc",
-      "tags"     : "jekyll, 블로그",
-      "url"      : "/learn/etc/jekyll/",
-      "date"     : "2018-01-01 00:00:00 +0900"
-    } ,
-  
-    {
       "title"    : "HTML5 Outline 알고리즘",
       "category" : "html5",
       "tags"     : "html5, outline, 아웃라인",
       "url"      : "/learn/html5/outline/",
       "date"     : "2017-12-31 00:00:00 +0900"
-    } ,
-  
-    {
-      "title"    : "CSS 손보잣",
-      "category" : "css3",
-      "tags"     : "css, layout",
-      "url"      : "/learn/css3/css/",
-      "date"     : "2017-12-30 00:00:00 +0900"
     } ,
   
     {

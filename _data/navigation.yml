@@ -4,6 +4,9 @@
 - title: About
   url: /about
   desc: About me
+- title: Diary
+  url: /diary
+  desc: Daily Record
 - title: HTML5
   url: /html5
   desc: HTML5
