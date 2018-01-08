@@ -1,6 +1,6 @@
 <li>
   <div class="post-card">
-    <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" title="post.description" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})">{{post.title}} 링크</a>
+    <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" title="{{post.description}}" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})">{{post.title}} 링크</a>
 
     <div class="post-card-body">
       {% for tag in post.tags %}
