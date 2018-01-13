@@ -384,26 +384,25 @@
   <li>
     <p>또한, <code class="highlighter-rouge">then</code> 메소드에 넘겨준 콜백에서 Promise 객체를 반환하면, <code class="highlighter-rouge">then</code> 메소드가 반환한 Promise 객체는 앞의 Promise 객체의 결과를 따르게 된다.</p>
 
-    <p>```javascript
-// Promise 객체를 반환하는 함수
-function delay(ms) {
-  return new Promise(resolve =&gt; {
- setTimeout(() =&gt; {
-   console.log(<code class="highlighter-rouge">${ms} 밀리초가 지났습니다.</code>);
-   resolve();
- }, ms);
-  });
-}</p>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Promise 객체를 반환하는 함수</span>
+<span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">ms</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">ms</span><span class="p">}</span><span class="s2"> 밀리초가 지났습니다.`</span><span class="p">);</span>
+      <span class="nx">resolve</span><span class="p">();</span>
+    <span class="p">},</span> <span class="nx">ms</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">))</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">'끝'</span><span class="p">))</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'시작'</span><span class="p">);</span>
+</code></pre></div>    </div>
   </li>
 </ol>
-
-<p>delay(1000)
-  .then(() =&gt; delay(2000))
-  .then(() =&gt; Promise.resolve(‘끝’))
-  .then(console.log);</p>
-
-<p>console.log(‘시작’);
-   ```</p>
 
         </section>
         <div class="page-footer">
