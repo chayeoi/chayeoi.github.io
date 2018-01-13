@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-13T23:20:54+09:00</updated><id>http://localhost:4000/</id><title type="html">Ref.Charlie</title><subtitle>CHARLIE의 프론트엔드 기술 블로그
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-13T23:26:23+09:00</updated><id>http://localhost:4000/</id><title type="html">Ref.Charlie</title><subtitle>CHARLIE의 프론트엔드 기술 블로그
 </subtitle><author><name>Chanyeon Kim</name></author><entry><title type="html">18년 1월 5일 수업 내용 정리</title><link href="http://localhost:4000/learn/til/js-15/" rel="alternate" type="text/html" title="18년 1월 5일 수업 내용 정리" /><published>2018-01-05T00:00:00+09:00</published><updated>2018-01-05T00:00:00+09:00</updated><id>http://localhost:4000/learn/til/js-15</id><content type="html" xml:base="http://localhost:4000/learn/til/js-15/">&lt;h1 id=&quot;today-i-learned&quot;&gt;Today I Learned&lt;/h1&gt;
 
 &lt;blockquote&gt;
@@ -748,7 +748,7 @@
     &lt;p&gt;직접 구현해서 사용하기보단 npm에서 debounce, throttle 라이브러리를 검색해서 사용한다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;다음은 debounce, throttle을 구현한 코드이다.&lt;/p&gt;
+    &lt;p&gt;다음은 debounce, throttle을 직접 구현한 코드이다.&lt;/p&gt;
 
     &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
