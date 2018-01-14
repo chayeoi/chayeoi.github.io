@@ -9,12 +9,6 @@ $(document).ready(function() {
     $('.nav-sub-lists').removeClass('nav-sub-lists--active');
   });
 
-  $(document).click(function(e) {
-    if ($('.flex-container').hasClass('active')) {
-      $('.flex-container').removeClass('active');
-    }
-  })
-
   // Sub Menu Settings
   $('.nav-sup-title').click(function(e) {
     $(this).siblings('.nav-sub-lists').toggleClass('nav-sub-lists--active');
