@@ -7,15 +7,25 @@
 - title: Daily
   url: /daily
   desc: Daily log
-- title: HTML5
-  url: /html5
-  desc: HTML5
-- title: CSS3
-  url: /css3
-  desc: CSS3
-- title: Javascript
-  url: /js
-  desc: Javascript
-- title: Today I Learned
-  url: /til
-  desc: Today I Learned
+- title : Tech
+  desc: Tech
+  subs:
+    -
+      title: HTML5
+      url: /html5
+      desc: HTML5
+    -
+      title: CSS3
+      url: /css3
+      desc: CSS3
+    -
+      title: Javascript
+      url: /js
+      desc: Javascript
+- title: Study
+  desc: Study log
+  subs:
+    -
+      title: Today I Learned
+      url: /til
+      desc: Today I Learned

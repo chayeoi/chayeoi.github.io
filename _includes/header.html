@@ -8,9 +8,22 @@
       <nav class="main-nav">
         <h2 class="nav-heading-invisible">네비게이션</h2>
         <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
-        <ul>
+        <ul class="nav-lists">
           {% for category in site.data.navigation %}
-            <li><a href="{{site.baseurl}}{{category.url}}" title="{{category.desc}}">{{category.title}}</a></li>
+            {% if category.subs %}
+              <li class="nav-list nav-sup-list">
+                <span class="nav-sup-title">{{category.title}}</span>
+                <ul class="nav-sub-lists">
+                  {% for sub in category.subs %}
+                    <li class="nav-sub-list"><a href="{{sub.url}}" title="{{sub.desc}}" class="nav-sub-list__link">{{sub.title}}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="nav-list">
+                <a href="{{site.baseurl}}{{category.url}}" title="{{category.desc}}" class="nav-list__link">{{category.title}}</a>
+              </li>
+            {% endif %}
           {% endfor %} 
         </ul>
       </nav>
