@@ -1217,11 +1217,12 @@ pre code {
   font-weight: 400;
   font-size: 16px;
   color: #311e3e;
+  transition: all .5s linear;
 }
 
 .main-nav ul li a:hover {
   opacity: .8;
-  color: #87314e;
+  color: #bb2b2b;
 }
 
 .menu-icon-container {
