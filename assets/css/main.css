@@ -1242,7 +1242,7 @@ pre code {
   list-style: none;
   height: 0;
   overflow: hidden;
-  transition: height .5s;
+  transition: all .5s;
 }
 
 .nav-sub-lists--active {
