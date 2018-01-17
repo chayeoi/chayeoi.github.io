@@ -1240,18 +1240,22 @@ pre code {
   padding: 0;
   margin: 0;
   list-style: none;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: all .5s;
+  transition: all 1s;
 }
 
-.nav-sub-lists--active {
-  height: 150px;
+.nav-sup-list:hover .nav-sub-lists {
+  max-height: 512px;
 }
 
 .nav-sub-list {
   padding: .3rem 0 .3rem 1rem;
   font-weight: 400;
+}
+
+.nav-sub-list:last-child {
+  margin-bottom: 20px;
 }
 
 .nav-sub-list::before {
