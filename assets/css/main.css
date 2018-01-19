@@ -1243,11 +1243,11 @@ pre code {
   top: 50%;
   right: .8rem;
   transform: translateY(-50%);
+  transition: transform .5s;
 }
 
 .nav-list:hover .nav-sup-title::after {
-  border: 6px solid transparent;
-  border-bottom-color: #311e3e;
+  transform: rotate(180deg);
 }
 
 .nav-list:hover .nav-list__link,
@@ -2041,6 +2041,10 @@ pre code {
     left: 2.5%;
     bottom: 10%;
     color: #fff;
+  }
+
+  .nav-sub-lists {
+    max-height: 512px;
   }
 }
 
