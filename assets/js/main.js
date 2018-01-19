@@ -6,13 +6,13 @@ $(document).ready(function() {
     e.stopPropagation();
     
     $('.flex-container').toggleClass('active');
-    $('.nav-sub-lists').removeClass('collapse');
+    // $('.nav-sub-lists').removeClass('collapse');
   });
 
   // Sub Menu Settings
-  $('.nav-sup-title').click(function(e) {
-    $(this).siblings('.nav-sub-lists').toggleClass('collapse');
-  })
+  // $('.nav-sup-title').click(function(e) {
+  //   $(this).siblings('.nav-sub-lists').toggleClass('collapse');
+  // })
 
   // Search Settings
   $('.search-icon').on('click', function(e){
