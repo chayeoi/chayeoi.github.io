@@ -1547,8 +1547,20 @@ pre code {
 }
 
 .page-image .cover-image {
+  position: relative;
   height: 100%;
   width: 100%;
+}
+
+.cover-image::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .page-content {
@@ -1565,24 +1577,49 @@ pre code {
 }
 
 .header-page {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  max-width: 90%;
+  margin: 0 auto;
   margin-bottom: 30px;
+  position: relative;
+  top: 70%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .header-page h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  order: 1;
+  font-weight: 300;
   font-size: 36px;
-  text-align: center;
+  /* text-align: center; */
   margin: 0 0 20px;
-  color: #311e3e;
+  color: #eeeeee;
 }
 
-.header-page .page-date {
-  text-align: center;
-  font-size: 14px;
+.page-date {
+  order: 0;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 300;
+  color: #eeeeee;
+}
+
+.page-date::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 1px;
+  margin: 10px 0;
+  background: #eee;
+}
+
+.page-desc {
+  order: 1;
+  font-size: 18px;
+  font-weight: 100;
+  color: #eee;
 }
 
 .page-footer {
