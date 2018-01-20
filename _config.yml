@@ -1,10 +1,10 @@
-title: REF.CHARLIE
+title: CHAYEOI
 email: y2oniary@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  CHARLIE의 프론트엔드 기술 블로그
+  CHAYEOI 기술 블로그
 permalink: '/learn/:categories/:title/' # default '/:title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://refcharlie.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://chayeoi.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author: Chanyeon Kim # add your name
