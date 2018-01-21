@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url("../fonts/source-code-pro/css/source-code-pro.css");
 @import url("../fonts/spoqa-han-sans/css/spoqa-han-sans.css");
+@import url("../fonts/fontello/css/fontello.css");
 
 /* reset */
 
@@ -1105,7 +1106,7 @@ a {
 blockquote {
   /* border default */
   /* border-left: 3px solid #3e1e36; */
-  border-left: 3px solid #33b880;
+  border-left: 3px solid #3989e4;
   margin: 16px 0px;
   padding: 5px 18px;
   margin-left: 21px;
@@ -2240,7 +2241,7 @@ pre code {
 }
 
 .pages-heading {
-  padding-left: 40px;
+  padding-left: 20px;
   position: relative;
   font-weight: 300;
   margin-top: 50px;
@@ -2251,14 +2252,27 @@ pre code {
 /* .pages-heading::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
-  width: 5px;
-  height: 100%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 80%;
   background-color: #16d485;
 } */
 
 .pages-heading::before {
+  content: '\e800';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-family: 'fontello';
+  /* font-size: 16px; */
+  color: #078ddd;
+}
+
+
+/* .pages-heading::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -2269,7 +2283,7 @@ pre code {
   border-bottom-color: none;
   border-left-color: none;
   transform: rotate(45deg) translateY(-50%);
-}
+} */
 
 
 /* a11y */
