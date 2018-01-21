@@ -27,6 +27,13 @@ ol {
   background: #fafafa;
 }
 
+code.highlighter-rouge {
+  padding: 1px 3px;
+  font-weight: 500;
+  color: #c7264e;
+  background-color: #f9f2f4;
+}
+
 .highlight .hll {
   background-color: #ffc;
 }
@@ -458,6 +465,49 @@ ol {
   color: #999;
 }
 
+/* Oceanic next color scheme */
+
+/* body */
+/* .highlight {
+  background-color: #1B2B34;
+} */
+
+
+/* Error */
+
+/* .highlight .k {
+  color: #5FB3B3;
+} */
+
+/* ? */
+
+/* .highlight .nx {
+  color: #D8DEE9;
+} */
+
+/* Literal.String.Regex */
+
+/* .highlight .s1 {
+  color: #99C794;
+} */
+
+/* Comment.Preproc */
+
+/* .highlight .c1 {
+  color: #65737E;
+} */
+
+/* Keyword.Constant */
+
+/* .highlight .kd {
+  color: #C594C5;
+} */
+
+/* Keyword */
+
+/* .highlight .o {
+  color: #D8DEE9;
+} */
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -473,7 +523,7 @@ ol {
  */
 
 html {
-  line-height: 1.15;
+  line-height: 1.8;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -1019,7 +1069,7 @@ body {
 }
 
 html {
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 body {
@@ -1564,7 +1614,7 @@ pre code {
 }
 
 .page-content {
-  /* margin-top: -80px; */
+  margin-top: 50px;
   margin-bottom: 100px;
   background-color: #fff;
   padding: 20px;
@@ -1591,7 +1641,7 @@ pre code {
 
 .header-page h1 {
   order: 1;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 36px;
   /* text-align: center; */
   margin: 0 0 20px;
@@ -1617,8 +1667,8 @@ pre code {
 
 .page-desc {
   order: 1;
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 20px;
+  font-weight: 200;
   color: #eee;
 }
 
