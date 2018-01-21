@@ -1,13 +1,13 @@
 ---
 layout: post
-title: this가 undefined에 바인딩되었던 이유
+title: this가 undefined가 되었던 이유
 description: Strict Mode에서의 this 바인딩 # Add post description (optional)
 img: post_es2015.jpg # Add image post (optional)
 tags: [tifo, this, strict, babel]
 author: # Add name author (optional)
 category: tifo
 ---
-# 어째서 this가 undefined에 바인딩되었을까?
+# 어째서 this가 undefined였을까?
 
 <br />
 
