@@ -2110,7 +2110,7 @@ pre code {
   }
   .post-card-box li {
     width: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
   }
   .post-card-box li:last-child {
     margin-bottom: 0;
@@ -2134,6 +2134,15 @@ pre code {
   .nav-sub-lists {
     max-height: 512px;
   }
+
+  .pages-heading {
+    padding-left: 10px;
+    font-size: 1.7rem;
+  }
+
+  .post-card-box {
+    margin-top: 50px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2141,7 +2150,7 @@ pre code {
     max-width: 95%;
   }
   .wrapper {
-    max-width: 98%;
+    max-width: 100%;
   }
   .page-content {
     /* margin-top: -50px; */
@@ -2241,7 +2250,7 @@ pre code {
 }
 
 .pages-heading {
-  padding-left: 20px;
+  /* padding-left: 20px; */
   position: relative;
   font-weight: 300;
   margin-top: 50px;
@@ -2262,7 +2271,8 @@ pre code {
 
 .pages-heading::before {
   content: '\e800';
-  position: absolute;
+  padding-right: 10px;
+  position: relative;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -2300,6 +2310,7 @@ table {
   border-collapse: collapse;
   background-color: #fafafa;
   font-weight: 100;
+  width: 100%;
 }
 
 th {
