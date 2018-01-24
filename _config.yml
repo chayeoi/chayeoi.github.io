@@ -2,7 +2,7 @@ title: CHAYEOI BLOG
 email: y2oniary@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   CHAYEOI 기술 블로그
-permalink: '/learn/:categories/:title/' # default '/:title/'
+permalink: '/:categories/:title/' # default '/:title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://chayeoi.com" # the base hostname & protocol for your site, e.g. http://example.com
 
