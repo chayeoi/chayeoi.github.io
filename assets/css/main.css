@@ -10,6 +10,10 @@ ol {
   margin: 0;
 }
 
+p {
+  margin: .5em 0;
+}
+
 .highlight {
   background-color: #fafafa;
   -webkit-border-radius: 3px;
@@ -524,7 +528,7 @@ code.highlighter-rouge {
  */
 
 html {
-  line-height: 1.8;
+  line-height: 2;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -1070,7 +1074,7 @@ body {
 }
 
 html {
-  line-height: 1.8;
+  line-height: 2;
 }
 
 body {
@@ -2315,11 +2319,11 @@ table {
 
 th {
   padding: 0.5em 1em;
-  border: 1px solid #ccc;
+  border: 2px solid #fff;
   background-color: #eee;
 }
 
 td {
   padding: 0.5em 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
 }
