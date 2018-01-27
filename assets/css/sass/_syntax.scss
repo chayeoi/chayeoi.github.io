@@ -1,5 +1,11 @@
-.highlight {background-color: #faf9f9; border-radius: 3px; margin: 0;}
-.highlighter-rouge {color: $dark-pink; font-weight: 400; border: 1px solid #607D8B; border-radius: 3px; padding: 0.1rem 0.5rem;}
+.highlight {background-color: #fafafa; border-radius: 3px; margin: 0;}
+.highlighter-rouge {color: $dark-pink; font-size: 0.9rem; font-weight: 400; border-radius: 3px; padding: 0.1rem 0; background: #fafafa;}
+code.highlighter-rouge {
+  padding: 1px 3px;
+  font-weight: 500;
+  color: #c7264e;
+  background-color: #f9f2f4;
+}
 .highlight .hll { background-color: #ffc; }
 .highlight .c { color: #999; } /* Comment */
 .highlight .err { color: #a00; background-color: #faa; } /* Error */

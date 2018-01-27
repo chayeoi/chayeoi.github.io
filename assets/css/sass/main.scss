@@ -1,7 +1,15 @@
 @import "variables";
 @import "syntax";
 @import "tools/normalize";
+@import "fonts/source-code-pro/scss/source-code-pro";
+@import "fonts/spoqa-han-sans/scss/spoqa-han-sans";
+@import "fonts/fontello/scss/fontello";
 
+/* a11y */
+
+[class$="invisible"] {
+  display: none;
+}
 
 /* = = = = = = = = = = Main Styles = = = = = = = = = = */
 
@@ -12,14 +20,16 @@
 html, body {
   height: 100%;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 html {
-  line-height: 1.5;
+  line-height: 2;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Montserrat', sans-serif;
+  font-weight: 300;
   color: $dark-gray;
   margin: 0;
   background-color: $white;
@@ -28,9 +38,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Lato', sans-serif;
   color: $dark-purple;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 img {
@@ -43,22 +53,46 @@ a {
 }
 
 blockquote {
-  border-left: 3px solid $dark-purple;
-  padding-left: 18px;
-  margin-left: 21px;
+  border-left: 3px solid $light-blue;
+  margin: 16px 0 16px 21px;
+  padding: 5px 18px;
   font-style: italic;
   color: $dark-purple;
+  background-color: #fdfdfd;
 }
 
 pre {
   padding: 16px 32px;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: normal;
+  word-break: break-all;
 
   code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+/* Table */
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: #fafafa;
+  font-weight: 100;
+  width: 100%;
+}
+
+th {
+  padding: 0.5em 1em;
+  border: 2px solid #fff;
+  background-color: #eee;
+}
+
+td {
+  padding: 0.5em 1em;
+  border: 1px solid #fff;
 }
 
 .flex-container {
@@ -84,6 +118,13 @@ pre {
 
 .content {
   flex-grow: 1;
+}
+
+.header-wrapper {
+  width: 960px;
+  max-width: 90%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .wrapper {
@@ -137,6 +178,9 @@ pre {
 
 /* = = = = = = = = = = About Page Styles = = = = = = = = = = */
 @import "parts/about";
+
+/* = = = = = = = = = = About Page Styles = = = = = = = = = = */
+@import "parts/pages";
 
 /* = = = = = = = = = = Tags Styles = = = = = = = = = = */
 @import "parts/tags";

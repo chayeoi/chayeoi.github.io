@@ -9,8 +9,17 @@
  *    IE on Windows Phone and in iOS.
  */
 
+ul,
+ol {
+  margin: 0;
+}
+
+p {
+  margin: .5em 0;
+}
+
 html {
-  line-height: 1.15; /* 1 */
+  line-height: 2; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -46,7 +55,7 @@ section {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0.3em 0;
 }
 
 /* Grouping content
@@ -88,7 +97,8 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: 'Source Code Pro', monospace, monospace;
+  /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -142,7 +152,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: 'Source Code Pro', monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -343,7 +353,9 @@ progress {
  */
 
 textarea {
-  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: normal;
+  word-break: break-all;
 }
 
 /**

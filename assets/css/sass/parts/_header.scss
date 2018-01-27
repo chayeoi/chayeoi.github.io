@@ -11,6 +11,7 @@
   }
   .logo {
     width: 50%;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     a {
       text-decoration: none;
@@ -32,33 +33,97 @@
   background-color: $white;
   padding: 25px 30px;
   transform: translate3d(-300px, 0, 0);
-  ul {
-    padding: 15px 0 0;
-    margin: 0;
-    list-style: none;
+}
 
-    li {
-      border-bottom: 1px solid $lighten-gray;
-      a {
-        display: block;
-        padding: 15px 0;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 16px;
-        color: $dark-purple;
-        &:hover {
-          opacity: .8;
-          color: $dark-pink;
-        }
-      }
-    }
-  }
+.nav-lists {
+  padding: 0;
+  margin: 50px 0 0;
+  list-style: none;
+}
+
+.nav-list {
+  border-bottom: 1px solid $lighten-gray;
+}
+
+.nav-list__link,
+.nav-sup-title {
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  color: $dark-purple;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.nav-sup-title {
+  position: relative;
+}
+
+.nav-sup-title::after {
+  content: '';
+  display: block;
+  border: 6px solid transparent;
+  border-top-color: #311e3e;
+  position: absolute;
+  top: 50%;
+  right: .8rem;
+  transform: translateY(-50%);
+  transition: transform .5s;
+}
+
+.nav-list:hover .nav-sup-title::after {
+  transform: rotate(180deg);
+}
+
+.nav-list:hover .nav-list__link,
+.nav-list:hover .nav-sup-title {
+  opacity: .8;
+  color: $lighten-blue;
+}
+
+.nav-sub-lists {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.nav-sup-list:hover .nav-sub-lists {
+  max-height: 512px;
+}
+
+.nav-sub-list {
+  padding: .3rem 0 .3rem 1rem;
+  font-weight: 400;
+}
+
+.nav-sub-list:last-child {
+  margin-bottom: 20px;
+}
+
+.nav-sub-list::before {
+  content: '-';
+  margin-right: .3rem;
+}
+
+.nav-sub-list__link {
+  text-decoration: none;
+  color: $dark-purple;
+}
+
+.nav-sub-list__link:hover {
+  color: $lighten-blue;
 }
 
 .menu-icon-container {
   width: 25%;
   text-align: left;
+  order: -1;
 }
 
 .search-icon-container {

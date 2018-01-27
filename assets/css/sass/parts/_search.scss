@@ -18,6 +18,7 @@
 
 .search-form {
   margin-bottom: 15px;
+  // opacity: 1;
   .search {
     width: 100%;
     padding: 15px;
@@ -31,7 +32,10 @@
 
 .results-search {
   list-style: none;
-  overflow: auto;
+  // overflow: auto;
+  // white-space: pre-wrap;
+  // word-wrap: normal;
+  // word-break: break-all;
   height: 90vh;
   margin: 0;
   padding: 0;
