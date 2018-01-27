@@ -347,6 +347,8 @@ ol {
 
 p {
   margin: .5em 0;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 html {
