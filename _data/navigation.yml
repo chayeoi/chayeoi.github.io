@@ -1,12 +1,6 @@
 - title: Home
   url: /
   desc: Home
-- title: About
-  url: /about
-  desc: About me
-- title: Daily
-  url: /daily
-  desc: Daily log
 - title : Tech
   desc: Tech
   subs:
@@ -32,3 +26,9 @@
     - title: Today I Found Out
       url: /tifo
       title: Today I Found Out
+- title: Daily
+  url: /daily
+  desc: Daily log
+- title: About
+  url: /about
+  desc: About me
