@@ -5,17 +5,21 @@
   desc: Tech
   subs:
     -
-      title: HTML5
-      url: /html5
-      desc: HTML5
-    -
-      title: CSS3
-      url: /css3
-      desc: CSS3
-    -
-      title: Javascript
+      title: Basic JS
       url: /js
-      desc: Javascript
+      desc: Basic Javascript
+    -
+      title: Advanced JS
+      url: /advanced-js
+      desc: Advanced JS
+    -
+      title: React
+      url: /react
+      desc: React
+    -
+      title: Vue
+      url: /vue
+      desc: Vue
 - title: Study
   desc: Study log
   subs:
