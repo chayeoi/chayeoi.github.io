@@ -1075,6 +1075,10 @@ pre code {
   padding-left: 0;
 }
 
+ul, ol {
+  padding-left: 20px;
+}
+
 /* Table */
 table {
   border-spacing: 0;
@@ -2019,9 +2023,6 @@ td {
   }
   .wrapper {
     max-width: 100%;
-  }
-  .page-content {
-    padding: 30px;
   }
   .header-page {
     margin-bottom: 20px;
