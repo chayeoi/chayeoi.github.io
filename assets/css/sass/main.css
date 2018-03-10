@@ -1050,6 +1050,10 @@ img {
   max-width: 100%;
 }
 
+p > img {
+  margin: 50px auto;
+}
+
 a {
   color: #87314e;
 }
