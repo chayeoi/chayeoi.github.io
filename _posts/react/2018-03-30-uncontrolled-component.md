@@ -11,11 +11,13 @@ category: react
 
 최근에 React 기반의 프로젝트를 진행하는 동안, Form 요소의 `file input`을 사용할 일이 있었고 그 과정에서 이 녀석을 어떻게든 **'제어되는 컴포넌트(Controlled Component)'**로 구현해보려고 애를 썼던 경험이 있다. 이때 새로 깨닫게 된 사실들을 글로 정리할 겸, 제어되는 컴포넌트와 제어되지 않는 컴포넌트에 대한 내용도 함께 정리해보기로 했다.
 
+## React에서 Form 엘리먼트를 다루는 방법
+
 React 세계에서 HTML Form 엘리먼트는 다른 DOM 엘리먼트들과는 약간 다른 방식으로 다뤄진다. HTML Form 엘리먼트들은 이미 자체적으로 자신의 내부 상태를 가진다는 사실로 인해, React 내장 상태(state)를 **신뢰 가능한 단일 소스(Single Source of Truth)**로 관리하고자 하는 설계 원칙에 위배되기 때문이다. 예를 들어, `div`와 같은 일반적인 DOM 엘리먼트는 그 자체적으로 어떤 상태도 갖지 않지만 `<input type="text" />`는 사용자의 입력에 따라 `value` 속성의 값이 변경되고 `<input type="checkbox" />`는 사용자의 선택 유무에 따라 `value` 속성의 값이 변경된다. React에서는 이런 독특한 특징을 갖는 Form 엘리먼트들을 다루기 위해 **'제어되는 컴포넌트(Controlled Component)'와 '제어되지 않는 컴포넌트(Uncontrolled Component)'**라는 두 가지 방법을 제공한다.
 
-## 제어되는 컴포넌트(Controlled Component)
+### 제어되는 컴포넌트(Controlled Component)
 
-React에서 HTML Form 엘리먼트를 다룰 때, 해당 엘리먼트가 React의 내장 상태 이외에 그 자체적으로 내장 상태를 갖기 때문에 상태 관리가 복잡해진다는 문제가 발생한다. 이 문제를 해결하기 위해, 각자 따로 존재하고 있는 **React 내장 상태(state)와 Form 엘리먼트가 자체적으로 갖고 있는 상태를 연결함으로써 React 컴포넌트의 내장 state를 신뢰 가능한 단일 소스(Single Source of Truth)로 만들 수 있다.** 이와 같이 input Form 엘리먼트의 값(value)이 React에 의해 제어되도록 만들 수 있는데, 이러한 방식을 '제어되는 컴포넌트(Controlled Component)'라고 한다.
+React에서 HTML Form 엘리먼트를 다룰 때, 해당 엘리먼트가 React의 내장 상태 이외에 그 자체적으로 내장 상태를 갖기 때문에 상태 관리가 복잡해진다는 문제가 발생한다. 이 문제를 해결하기 위해, 각자 따로 존재하고 있는 **React 내장 상태(state)와 Form 엘리먼트가 자체적으로 갖고 있는 상태를 연결함으로써 React 컴포넌트의 내장 상태(state)를 신뢰 가능한 단일 소스(Single Source of Truth)로 만들 수 있다.** 이와 같이 input Form 엘리먼트의 값(value)이 React에 의해 제어되도록 만들 수 있는데, 이러한 방식을 '제어되는 컴포넌트(Controlled Component)'라고 한다.
 
 ```jsx
 import React, { Component } from 'react'
@@ -56,7 +58,7 @@ export default class TextInput extends Component {
 
 대다수의 경우에 Form 엘리먼트를 위와 같은 방식의 '제어되는 컴포넌트(Controlled Component)'로 구현하는 것이 권장된다. 그러나 기존에 존재하던 앱에 React 컴포넌트를 점진적으로 도입하고 있는 상황이라면, React 내장 상태와 Form 엘리먼트의 자체적 상태를 동기화시키기 위해 이벤트 핸들러를 작성하고 상태를 연결하는 작업은 꽤 번거로운 일로 느껴질 수 있다. 이러한 상황에서 사용할 수 있는 또 다른 대안이 바로 지금부터 소개할 '제어되지 않는 컴포넌트(Uncontrolled Component)'이다.
 
-## 제어되지 않는 컴포넌트(Uncontrolled Component)
+### 제어되지 않는 컴포넌트(Uncontrolled Component)
 
 Form 관련 상태가 React의 내장 상태에 의해 관리되는 '제어되는 컴포넌트(Controlled Component)'와 달리, '제어되지 않는 컴포넌트(Uncontrolled Component)'는 그 상태가 DOM에 의해 자체적으로 다뤄진다. 때문에 React 컴포넌트 내부에서 DOM이 관리하는 상태 정보를 알아내기 위해서는 React 엘리먼트가 아닌 실제 DOM 엘리먼트에 직접적으로 접근할 수 있는 통로가 필요한데, 그 통로를 제공해주는 것이 바로 `ref` prop이다. `ref` prop에 넘겨진 콜백 함수는 `componentDidMount()` 또는 `componentDidUpdate()` 실행 직전에 호출되고 이 시점에 실제 DOM 엘리먼트에 대한 참조를 콜백 함수의 파라미터로 전달받는다. 이를 이용해 해당 컴포넌트의 인스턴스에 실제 DOM 엘리먼트에 대한 참조를 다음과 같이 저장할 수 있다.
 
@@ -111,7 +113,7 @@ export default class TextInput extends Component {
 
 제어되지 않는 컴포넌트(Uncontrolled Component)로 작성함으로써 코드의 길이는 더 짧아졌지만, Form 엘리먼트가 자체적으로 상태를 가지고 있기 때문에 규모가 더 커졌을 때 상태 관리가 복잡해지지 않을까 하는 걱정이 되기 시작한다. 그렇다면 도대체 언제 '제어되지 않는 컴포넌트'를 써도 되는지 궁금해진다.
 
-## 언제 제어되지 않는 컴포넌트를 써도 괜찮은 것일까
+### 언제 제어되지 않는 컴포넌트를 써도 괜찮은 것일까
 
 많은 아티클에서 Form 엘리먼트를 다룰 때 제어되지 않는 컴포넌트보다 '제어되는 컴포넌트(Controlled Component)'로 작성하는 것이 더 좋다고 말한다. 실제로 맞는 말이다. React에서 `ref` prop을 통해 실제 DOM을 참조하는 것은 성능적인 부분에서 잠재적 위험이 있을 뿐더러, '제어되는 컴포넌트(Controlled Component)'로 작성하게 되면 React 컴포넌트의 내장 상태를 신뢰 가능한 단일 소스(Single Source of Truth)로 관리할 수 있기 때문이다. 이런 이유때문에 나는 최근 진행했던 프로젝트에서 `file input`을 어떻게든 '제어되는 컴포넌트(Controlled Component)'로 다뤄보고자 아래와 같이 창의적이고(?) 괴상한 방법을 사용하기도 했다.
 
