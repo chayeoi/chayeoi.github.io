@@ -115,7 +115,7 @@ export default class TextInput extends Component {
 
 ### 언제 제어되지 않는 컴포넌트를 써도 괜찮은 것일까
 
-많은 아티클에서 Form 엘리먼트를 다룰 때 제어되지 않는 컴포넌트보다 '제어되는 컴포넌트(Controlled Component)'로 작성하는 것이 더 좋다고 말한다. 실제로 맞는 말이다. React에서 `ref` prop을 통해 실제 DOM을 참조하는 것은 성능적인 부분에서 잠재적 위험이 있을 뿐더러, '제어되는 컴포넌트(Controlled Component)'로 작성하게 되면 React 컴포넌트의 내장 상태를 신뢰 가능한 단일 소스(Single Source of Truth)로 관리할 수 있기 때문이다. 이런 이유때문에 나는 최근 진행했던 프로젝트에서 `file input`을 어떻게든 '제어되는 컴포넌트(Controlled Component)'로 다뤄보고자 아래와 같이 창의적이고(?) 괴상한 방법을 사용하기도 했다.
+많은 아티클에서 Form 엘리먼트를 다룰 때 제어되지 않는 컴포넌트보다 '제어되는 컴포넌트(Controlled Component)'로 작성하는 것이 더 좋다고 말한다. 실제로 맞는 말이다. React에서 `ref` prop을 통해 실제 DOM을 참조하는 것은 성능적인 부분에서 잠재적 위험이 있을 뿐더러, '제어되는 컴포넌트(Controlled Component)'로 작성하게 되면 React 컴포넌트의 내장 상태를 신뢰 가능한 단일 소스(Single Source of Truth)로 관리할 수 있기 때문이다. 이런 이유때문에 나는 최근 진행했던 프로젝트에서 `file input`을 어떻게든 '제어되는 컴포넌트(Controlled Component)'로 다뤄보고자 아래와 같이 창의적이고(?) 괴상한 방법을 시도했다.
 
 ```jsx
 import React, { Component } from 'react'
