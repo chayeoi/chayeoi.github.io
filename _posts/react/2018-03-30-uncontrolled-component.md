@@ -85,7 +85,7 @@ export default class Input extends Component {
 mounting 라이프사이클에서 콘솔에 `this.input`을 출력하기까지의 과정은 다음과 같다.
 
 1. `render()`가 실행되면서 `<input type="text" />`가 화면에 그려진다.
-2. 실제 DOM 엘리먼트가 만들어진 직후에 `ref` prop으로 넘겨진 콜백 함수가 실행되고, 이 콜백 함수는 해당 컴포넌트의 인스턴스의 `input`에 실제 DOM 엘리먼트에 대한 참조를 저장한다.
+2. 실제 DOM 엘리먼트가 만들어진 직후에 `ref` prop으로 넘겨진 콜백 함수가 실행되고, 이 콜백 함수는 해당 컴포넌트의 인스턴스에 `input`이라는 이름으로 실제 DOM 엘리먼트에 대한 참조를 저장한다.
 3. `componentDidMount()`의 실행에 앞서 `ref` prop에 넘겨진 콜백 함수가 실행되었으므로, 이 시점에서 `this.input`을 통해 실제 DOM 엘리먼트를 참조할 수 있게 된다.
 
 일찍이 앞에서 '제어되는 컴포넌트'로 작성했던 TextInput 컴포넌트를 '제어되지 않는 컴포넌트'로 아래와 같이 작성할 수 있다.
