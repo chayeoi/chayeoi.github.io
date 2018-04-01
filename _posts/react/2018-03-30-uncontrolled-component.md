@@ -17,7 +17,7 @@ React 세계에서 HTML Form 엘리먼트는 다른 DOM 엘리먼트들과는 �
 
 ### 제어되는 컴포넌트(Controlled Component)
 
-React에서 HTML Form 엘리먼트를 다룰 때, 해당 엘리먼트가 React의 내장 상태 이외에 그 자체적으로 내장 상태를 갖기 때문에 상태 관리가 복잡해진다는 문제가 발생한다. 이 문제를 해결하기 위해, 각자 따로 존재하고 있는 **React 내장 상태(state)와 Form 엘리먼트가 자체적으로 갖고 있는 상태를 연결함으로써 React 컴포넌트의 내장 상태(state)를 신뢰 가능한 단일 소스(Single Source of Truth)로 만들 수 있다.** 이와 같이 input Form 엘리먼트의 값(value)이 React에 의해 제어되도록 만들 수 있는데, 이러한 방식을 '제어되는 컴포넌트(Controlled Component)'라고 한다.
+React에서 HTML Form 엘리먼트를 다룰 때, 해당 엘리먼트가 React 컴포넌트의 내장 상태 이외에 그 자체적으로 내부 상태를 갖기 때문에 상태 관리가 복잡해진다는 문제가 발생한다. 이 문제를 해결하기 위해, 각자 따로 존재하고 있는 **React 내장 상태(state)와 Form 엘리먼트가 자체적으로 갖고 있는 상태를 연결함으로써 React 컴포넌트의 내장 상태(state)를 신뢰 가능한 단일 소스(Single Source of Truth)로 만들 수 있다.** 이와 같이 input Form 엘리먼트의 값(value)이 React에 의해 제어되도록 만들 수 있는데, 이러한 방식을 '제어되는 컴포넌트(Controlled Component)'라고 한다.
 
 ```jsx
 import React, { Component } from 'react'
