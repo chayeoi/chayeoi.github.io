@@ -45,7 +45,7 @@ package.json을 열고 `scripts`의 `start`, `test` 명령에 `NODE_PATH`를 추
 
 ## ESLint가 루트 디렉토리를 `src`로 인식하지 못하는 문제 해결하기
 
-동작하는 데에는 아무런 문제가 없지만, 프로젝트에 ESLint를 사용하고 있다면 ESLint는 import 경로의 루트 디렉토리가 src임을 인식하지 못하기 때문에 에러를 내뿜는다.
+동작하는 데에는 아무런 문제가 없지만, 프로젝트에 ESLint를 사용하고 있다면 ESLint는 import 경로의 루트 디렉토리가 src임을 인식하지 못하기 때문에 다음과 같은 에러를 내뿜는다.
 
 ***[eslint] Unable to resolve path to module 'Something'/ (import/no-unresolved)***
 
