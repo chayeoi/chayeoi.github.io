@@ -58,5 +58,5 @@ package.json을 열고 `scripts`의 `start`, `test` 명령에 `NODE_PATH`를 추
         "paths": ["src"]
       }
     }
-  },
+  }
 ```
